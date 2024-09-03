@@ -1,0 +1,43 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "temp"
+	group: ""
+	id: "0BC6992582458CDE"
+	order_index: 0
+	quest_links: [ ]
+	quests: [{
+		id: "3B769F74FF88C800"
+		rewards: [
+			{
+				id: "2C7E10169C34F58D"
+				item: {
+					Count: 1
+					id: "gtceu:prospector.hv"
+					tag: {
+						Charge: 1600000L
+					}
+				}
+				type: "item"
+			}
+			{
+				id: "53D11338057732E8"
+				item: {
+					Count: 1
+					id: "gtceu:energy_crystal"
+					tag: {
+						Charge: 6400000L
+					}
+				}
+				type: "item"
+			}
+		]
+		tasks: [{
+			id: "712BFA6D32BD2650"
+			type: "checkmark"
+		}]
+		x: 0.5d
+		y: 0.0d
+	}]
+	title: "temp"
+}

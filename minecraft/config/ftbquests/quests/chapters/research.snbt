@@ -1,0 +1,68 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "research"
+	group: ""
+	id: "24A7AA5C6AFEB66A"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "73724D642AE2BDF0"
+			tasks: [{
+				id: "6161FE4CC69F1EB5"
+				type: "custom"
+			}]
+			title: "grinder"
+			x: 0.5d
+			y: 1.5d
+		}
+		{
+			id: "3DD9E38EBBDEA66A"
+			tasks: [{
+				id: "449284A79D58CE0A"
+				type: "custom"
+			}]
+			title: "boiler"
+			x: 3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"73724D642AE2BDF0"
+				"54789565713C9597"
+			]
+			id: "49E796F89675F983"
+			tasks: [{
+				id: "67105B93D74541E5"
+				type: "custom"
+			}]
+			title: "chemical reactor"
+			x: 0.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3DD9E38EBBDEA66A"]
+			id: "54789565713C9597"
+			tasks: [{
+				id: "78580226A452CBD5"
+				type: "custom"
+			}]
+			title: "turbine"
+			x: 3.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["49E796F89675F983"]
+			id: "321E5FDD583988FC"
+			tasks: [{
+				id: "5FD94A533F8DEE91"
+				type: "custom"
+			}]
+			title: "electric blast furnace"
+			x: -2.5d
+			y: 4.0d
+		}
+	]
+	title: "research"
+}

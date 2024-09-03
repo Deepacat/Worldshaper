@@ -1,0 +1,57 @@
+{
+  "type": "minecraft:block_column",
+  "config": {
+    "direction": "down",
+    "allowed_placement": {
+      "type": "minecraft:matching_blocks",
+      "blocks": "minecraft:air"
+    },
+    "prioritize_tip": true,
+    "layers": [
+      {
+        "height": {
+          "type": "minecraft:weighted_list",
+          "distribution": [
+            {
+              "weight": 5,
+              "data": {
+                "type": "minecraft:uniform",
+                "value": {
+                  "min_inclusive": 2,
+                  "max_inclusive": 7
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "type": "minecraft:uniform",
+                "value": {
+                  "min_inclusive": 3,
+                  "max_inclusive": 12
+                }
+              }
+            }
+          ]
+        },
+        "provider": {
+          "type": "minecraft:weighted_state_provider",
+          "entries": [
+            {
+              "weight": 4,
+              "data": {
+                "Name": "minecraft:netherrack"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "Name": "minecraft:netherrack"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
