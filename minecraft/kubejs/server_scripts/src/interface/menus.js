@@ -92,11 +92,6 @@ let lvMenu = new MenuType(Text.blue("LV Menu"));
   });
 
 let researchMenu = new MenuType(Text.blue("Research Menu"));
-  researchMenu.addSlot({page: 0, x: 0, y: 0, label: "Quest1", item: "gtceu:steam_grinder",
-     onLeftClicked: (player) => {player.sendSystemMessage("Selected Quest1"); selectedQuest = "6161FE4CC69F1EB5"},});
-  researchMenu.addSlot({page: 0, x: 1, y: 0, label: "quest2", item: "gtceu:bronze_large_boiler",
-      onLeftClicked: (player) => {player.sendSystemMessage("Selected quest2"); selectedQuest = "449284A79D58CE0A"},});
- 
 
 ItemEvents.rightClicked((event) => {
   switch (event.item.id) {

@@ -3,11 +3,12 @@
     "text": "Science Station"
   },
   "appearance": {
+    "block": "minecraft:furnace",
     "running": {
-      "custommachinery:block": "minecraft:blast_furnace"
-    },
-    "custommachinery:block": "minecraft:furnace"
-  },
+        "block": "minecraft:furnace[lit=true]",
+        "light": 15
+    }
+},
   "components": [
     {
       "type": "custommachinery:item",

@@ -72,17 +72,42 @@
 // })
 let selectedQuest = '6161FE4CC69F1EB5'
 let questPacks = []
+let researchNum = 0
 
-function createResearchTask(taskid, scienceList, amount) {
+function createResearchTask(itemIcon, questName, taskid, scienceList, amount) {
     let quest = [taskid, scienceList]
     questPacks.push(quest)
-
+    
     FTBQuestsEvents.customTask(taskid, event => {
         event.maxProgress = amount
     })
+
+    researchMenu.addSlot({
+        page: 0, 
+        x: researchNum, 
+        y: 0,
+        label: questName, 
+        item: itemIcon, 
+        tooltip: "questid: " + taskid,
+        onLeftClicked: (player) =>{
+            player.sendSystemMessage("Selected quest: " + questName + " (" + taskid + ")");
+            selectedQuest = taskid
+        }});
+
+    researchNum++
 }
 
-createResearchTask('2', ['red', 'green', 'blue'], 100)
-createResearchTask('3', ['red', 'green', 'blue', 'yellow'], 100)
-createResearchTask('6161FE4CC69F1EB5', ['red', 'green'], 100)  //grinder
-createResearchTask('449284A79D58CE0A', ['red', 'green'], 100)  //boiler
+// createResearchTask('test1', '1', ['red', 'green', 'blue'], 100)
+// createResearchTask('test2', '2', ['red', 'green', 'blue', 'yellow'], 100)
+createResearchTask('gtceu:steam_grinder' , 'Grinder', '6161FE4CC69F1EB5', ['red', 'green'], 100)  //grinder
+createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
+createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
+createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
+createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
+createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
+createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
+createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
+createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
+createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
+createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
+createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler

@@ -8,6 +8,7 @@
 	quest_links: [ ]
 	quests: [
 		{
+			icon: "gtceu:steam_grinder"
 			id: "73724D642AE2BDF0"
 			tasks: [{
 				id: "6161FE4CC69F1EB5"
@@ -18,6 +19,7 @@
 			y: 1.5d
 		}
 		{
+			icon: "gtceu:bronze_large_boiler"
 			id: "3DD9E38EBBDEA66A"
 			tasks: [{
 				id: "449284A79D58CE0A"
