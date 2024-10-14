@@ -1,0 +1,11 @@
+ServerEvents.recipes(e => {
+    e.remove({id: 'ae2:network/blocks/storage_drive'})
+    e.remove({id: 'fulleng:terminals/block_terminal_from_part'})
+    e.remove({id: 'fulleng:terminals/block_crafting_terminal_from_part'})
+    e.remove({id: 'ae2:network/blocks/energy_energy_acceptor'})
+    e.remove({id: 'ae2:network/cells/item_storage_components_cell_1k_part'})
+    e.remove({id: 'ae2:network/blocks/energy_energy_cell'})
+    e.remove({id: 'ae2:network/cells/item_storage_cell_1k'})
+    e.remove({id: 'ae2:network/cells/fluid_storage_cell_1k'})
+    e.remove({id: 'jei:/ae2/charger/meteorite_compass'})
+})

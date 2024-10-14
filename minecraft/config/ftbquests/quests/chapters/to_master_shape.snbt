@@ -1,0 +1,11 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "to_master_shape"
+	group: "0AA35FBC37786F6E"
+	id: "748E3E00074CCF7C"
+	order_index: 0
+	quest_links: [ ]
+	quests: [ ]
+	title: "To Master Shape"
+}

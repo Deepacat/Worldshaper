@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "krfekred"
+	group: "72BC2643F40BB7F9"
+	icon: "alexscaves:darkened_apple"
+	id: "2F810F187C37AEF7"
+	order_index: 4
+	quest_links: [ ]
+	quests: [ ]
+	title: " &k#&rFe&k#&re&k#&rd"
+}

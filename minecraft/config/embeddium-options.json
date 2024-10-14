@@ -1,8 +1,9 @@
 {
   "quality": {
-    "weather_quality": "DEFAULT",
+    "weather_quality": "FAST",
     "leaves_quality": "DEFAULT",
-    "enable_vignette": true
+    "enable_vignette": false,
+    "use_quad_normals_for_shading": false
   },
   "advanced": {
     "enable_memory_tracing": false,
@@ -24,6 +25,6 @@
   "notifications": {
     "force_disable_donation_prompts": false,
     "has_cleared_donation_button": false,
-    "has_seen_donation_prompt": false
+    "has_seen_donation_prompt": true
   }
 }

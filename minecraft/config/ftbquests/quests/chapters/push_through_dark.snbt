@@ -1,0 +1,11 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "push_through_dark"
+	group: "6661B69C34B647BE"
+	id: "1CB89E94912265AF"
+	order_index: 0
+	quest_links: [ ]
+	quests: [ ]
+	title: "Push Through Dark"
+}

@@ -1,0 +1,10 @@
+{
+  "dimension": "worldshaper:magnetic",
+  "gravity": 9.807,
+  "orbit": "ad_astra:earth_orbit",
+  "oxygen": true,
+  "solar_power": 16,
+  "solar_system": "worldshaper:caves",
+  "temperature": 15,
+  "tier": 1
+}

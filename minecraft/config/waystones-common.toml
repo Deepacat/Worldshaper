@@ -56,7 +56,7 @@
 	#Allowed Values: ALLOW, GLOBAL_ONLY, DENY
 	dimensionalWarp = "ALLOW"
 	#List of dimensions that players are allowed to warp cross-dimension from and to. If left empty, all dimensions except those in dimensionalWarpDenyList are allowed.
-	dimensionalWarpAllowList = []
+	dimensionalWarpAllowList = ["minecraft:overworld", "gregtorio:semiflat", "minecraft:the_nether"]
 	#List of dimensions that players are not allowed to warp cross-dimension from and to. Only used if dimensionalWarpAllowList is empty.
 	dimensionalWarpDenyList = []
 	#Set to true if players should be able to teleport between waystones by simply right-clicking a waystone.

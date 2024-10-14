@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "venus"
+	group: "6661B69C34B647BE"
+	icon: "ad_astra:venus_globe"
+	id: "16FFA64E22B8F2AD"
+	order_index: 1
+	quest_links: [ ]
+	quests: [ ]
+	title: " venus"
+}

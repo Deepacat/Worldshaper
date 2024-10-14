@@ -1,0 +1,9 @@
+# Use Cloth Config mod for the descriptions.
+---
+rules:
+  minecraft:the_nether:
+    doMobLoot: 'true'
+  minecraft:overworld:
+    doMobSpawning: 'false'
+  worldshaper:semiflat:
+    doMobSpawning: 'false'

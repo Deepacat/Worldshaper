@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "magnetic"
+	group: "72BC2643F40BB7F9"
+	icon: "gtceu:hv_item_magnet"
+	id: "3F95E876927EC079"
+	order_index: 2
+	quest_links: [ ]
+	quests: [ ]
+	title: " Polarizing "
+}

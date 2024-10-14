@@ -9,7 +9,7 @@
 	drop_loot_crates: false
 	emergency_items_cooldown: 300
 	grid_scale: 0.5d
-	icon: "gtceu:bronze_gearbox"
+	icon: "create:handheld_worldshaper"
 	lock_message: ""
 	loot_crate_no_drop: {
 		boss: 0
@@ -18,6 +18,6 @@
 	}
 	pause_game: false
 	progression_mode: "linear"
-	title: "Gregtorio"
+	title: "Worldshaper"
 	version: 13
 }

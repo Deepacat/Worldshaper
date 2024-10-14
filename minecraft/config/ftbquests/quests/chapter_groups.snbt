@@ -1,3 +1,10 @@
 {
-	chapter_groups: [ ]
+	chapter_groups: [
+		{ id: "4F351358FC45A20D", title: "0 | ULV - LV" }
+		{ id: "41FEA52DD45936FD", title: "1 | MV-HV" }
+		{ id: "72BC2643F40BB7F9", title: "2 | EV-IV" }
+		{ id: "6661B69C34B647BE", title: "3 | LuV-ZPM" }
+		{ id: "0AA35FBC37786F6E", title: "4 | UV-UHV" }
+		{ id: "24068104ACB87438", title: "Info" }
+	]
 }

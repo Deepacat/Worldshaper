@@ -1,0 +1,24 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "limbo"
+	group: "4F351358FC45A20D"
+	icon: "dimdoors:solid_static"
+	id: "43E55C1C18BDF9C7"
+	order_index: 2
+	quest_links: [ ]
+	quests: [{
+		id: "0BFE1E4F06B3971F"
+		invisible: true
+		tasks: [{
+			dimension: "dimdoors:limbo"
+			id: "255EAB9919312E1E"
+			title: "Visit Limbo"
+			type: "dimension"
+		}]
+		title: "They Cannot see you here."
+		x: 0.5d
+		y: 0.5d
+	}]
+	title: " E&k#&rmp&k#&rty"
+}

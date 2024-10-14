@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "toxic_caves"
+	group: "0AA35FBC37786F6E"
+	icon: "alexscaves:block_of_uranium"
+	id: "675BDF185AB3B421"
+	order_index: 2
+	quest_links: [ ]
+	quests: [ ]
+	title: " toxic caves"
+}

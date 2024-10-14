@@ -1,0 +1,32 @@
+# How many tiers of dimensional shells there should be (the mod has recipes upto tier 2 and textures upto tier 5):
+shell_tiers 5
+# uncomment the following line to disable this config's reloading when entering a world
+# or using /reload command. May be useful to do in very large modpacks when you want to decrease load times as much as possible
+# reloading takes more times the more worlds there are, however even with a 1000 worlds it will probably take a few miliseconds.
+# no_reload
+
+# max 3 dimensional distance between the cannon and its goal chest
+max_3d_distance 250
+
+# additional 3 dimensional distance between the cannon and its goal chest per tier of shell
+additional_3d_distance_per_tier 500
+
+# dimension shell tier requirements settings:
+dimension minecraft:overworld 0
+dimension minecraft:the_nether 0
+
+dimension ad_astra:moon 1
+dimension alexscaves:primordial_caves 1
+
+dimension ad_astra:mars 2
+dimension worldshaper:magnetic 2
+
+dimension ad_astra:venus 3
+dimension ad_astra:mercury 3
+dimension worldshaper:forlorn 3
+dimension worldshaper:abyssal 3
+
+dimension ad_astra:glacio 4
+dimension worldshaper:toxic 4
+
+dimension dimdoors:limbo 5

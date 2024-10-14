@@ -14,6 +14,9 @@ modlist.html
 
 # minecraft/kubejs/data/minecraft/tags*
 # minecraft/kubejs/data/minecraft/worldgen*
+minecraft/config/alexsmobs*
+minecraft/resourcepacks
+minecraft/resourcepacks*
 minecraft/resourcepacks/Quark*
 minecraft/config/everycomp-hazardous.properties
 /minecraft/config/konkrete/locals
