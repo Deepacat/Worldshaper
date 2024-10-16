@@ -35,7 +35,7 @@ global.compList = [
     "#gtceu:emitters",
     "#gtceu:sensors"
 ]
-global.voltageRegex = [/^gtceu:.*ulv_.*/, /^gtceu:.*lv_.*/, /^gtceu:.*mv_.*/, /^gtceu:.*hv_.*/, /^gtceu:.*ev_.*/, /^gtceu:.*iv_.*/, /^gtceu:.*luv_.*/, /^gtceu:.*zpm_.*/, /^gtceu:.*uv_.*/, /^gtceu:.*uhv_.*/]
+global.voltageRegex = ['ulv_', 'lv_', 'mv_', 'hv_', 'ev_', 'iv_', 'luv_', 'zpm_', 'uv_', 'uhv_']
 
 // Defines the current packs max voltage for recipe sake
 global.maxVoltage = 1
@@ -49,9 +49,9 @@ ItemEvents.modification(e => {
     // list of regex's to nuke
     let regexToNuke = [
         // comps
-        /^gtceu:.*board/, /^gtceu:.*chip/, /^gtceu:.*wafer/, /^gtceu:.*boule/, /^gtceu:.*transistor/, /^gtceu:.*resistor/, /^gtceu:.*capacitor/, /^gtceu:.*diode/, /^gtceu:.*inductor/, /^gtceu:.*soc/, /^gtceu:.*cpu/,
+        'board', 'chip', 'wafer', 'boule', 'transistor', 'resistor', 'capacitor', 'diode', 'inductor', 'soc', 'cpu',
         // materials (WOW THIS IS AWFUL)
-        /^gtceu:.*hastelloy_c_276/, /^gtceu:.*titanium_tungsten_carbide/, /^gtceu:.*titanium_carbide/, /^gtceu:.*stellite_100/, /^gtceu:.*hastelloy_x/, /^gtceu:.*maraging_steel_300/, /^gtceu:.*incoloy_ma_956/, /^gtceu:.*watertight_steel/, /^gtceu:.*zeron_100/, /^gtceu:.*molybdenum_disilicide/, /^gtceu:.*hsla_steel/, /^gtceu:.*tantalum_carbide/, /^gtceu:.*blue_alloy/, /^gtceu:.*hsss/, /^gtceu:.*hsse/, /^gtceu:.*hssg/, /^gtceu:.*red_alloy/, /^gtceu:.*blue_steel/, /^gtceu:.*red_steel/, /^gtceu:.*borosilicate_glass/, /^gtceu:.*potin/, /^gtceu:.*ruthenium_trinium_americium_neutronate/, /^gtceu:.*enriched_naquadah_trinium_europium_duranide/, /^gtceu:.*uranium_rhodium_dinaquadide/, /^gtceu:.*indium_tin_barium_titanium_cuprate/, /^gtceu:.*samarium_iron_arsenic_oxide/, /^gtceu:.*uranium_triplatinum/, /^gtceu:.*mercury_barium_calcium_cuprate/, /^gtceu:.*magnesium_dioboride/, /^gtceu:.*manganese_phosphide/, /^gtceu:.*tungsten_carbide/, /^gtceu:.*nickel_zinc_ferrite/, /^gtceu:.*indium_gallium_phosphide/, /^gtceu:.*gallium_arsenide/, /^gtceu:.*yttrium_barium_cuprate/, /^gtceu:.*vanadium_gallium/, /^gtceu:.*magnalium/, /^gtceu:.*niobium_nitride/, /^gtceu:.*niobium_titanium/, /^gtceu:.*bismith_bronze/, /^gtceu:.*black_bronze/, /^gtceu:.*rose_gold/, /^gtceu:.*sterling_silver/, /^gtceu:.*samarium/, /^gtceu:.*tantalum/, /^gtceu:.*yttrium/, /^gtceu:.*plutonium_241/, /^gtceu:.*niobium/, /^gtceu:.*neodymium/, /^gtceu:.*molybdenum/, /^gtceu:.*manganese/, /^gtceu:.*bismuth/, /^gtceu:.*beryllium/, /^gtceu:.*cobalt/
+        'hastelloy_c_276', 'titanium_tungsten_carbide', 'titanium_carbide', 'stellite_100', 'hastelloy_x', 'maraging_steel_300', 'incoloy_ma_956', 'watertight_steel', 'zeron_100', 'molybdenum_disilicide', 'hsla_steel', 'tantalum_carbide', 'blue_alloy', 'hsss', 'hsse', 'hssg', 'red_alloy', 'blue_steel', 'red_steel', 'borosilicate_glass', 'potin', 'ruthenium_trinium_americium_neutronate', 'enriched_naquadah_trinium_europium_duranide', 'uranium_rhodium_dinaquadide', 'indium_tin_barium_titanium_cuprate', 'samarium_iron_arsenic_oxide', 'uranium_triplatinum', 'mercury_barium_calcium_cuprate', 'magnesium_dioboride', 'manganese_phosphide', 'tungsten_carbide', 'nickel_zinc_ferrite', 'indium_gallium_phosphide', 'gallium_arsenide', 'yttrium_barium_cuprate', 'vanadium_gallium', 'magnalium', 'niobium_nitride', 'niobium_titanium', 'bismith_bronze', 'black_bronze', 'rose_gold', 'sterling_silver', 'samarium', 'tantalum', 'yttrium', 'plutonium_241', 'niobium', 'neodymium', 'molybdenum', 'manganese', 'bismuth', 'beryllium', 'cobalt', 'damascus_steel', 'black_steel', 'opal', 'red_garnet', 'yellow_garnet', 'olivine', 'sodalite', 'lazurite', 'ruby', 'sapphire', 'blue_topaz', 'emerald', 'green_sapphire', 'topaz', 'amethyst', 'echo_shard'
     ]
 
     // add tiered items regex's to nuke list,
@@ -59,11 +59,11 @@ ItemEvents.modification(e => {
         if(global.voltageRegex.indexOf(regex) > global.maxVoltage)
             regexToNuke.push(regex)
     })
-    console.log(regexToNuke)
 
     // add items to nuke list from the regex's
-    regexToNuke.forEach(itemlist => {
-        let currentitemlist = Ingredient.of(itemlist).itemIds
+    regexToNuke.forEach(itemlistRegex => {
+        let formattedRegex = new RegExp(`^gtceu.*${itemlistRegex}`, 'g')
+        let currentitemlist = Ingredient.of(formattedRegex).itemIds
         currentitemlist.forEach(item => {
             if (!global.nukeList.includes(item))
                 global.nukeList = global.nukeList.concat(item)
@@ -73,7 +73,7 @@ ItemEvents.modification(e => {
     // GT manually added to nukelist
     global.nukeList.push(
         // gcyms
-
+        "gtceu:large_maceration_tower", "gtceu:large_chemical_bath", "gtceu:large_centrifuge", "gtceu:large_mixer", "gtceu:large_electrolyzer", "gtceu:large_electromagnet", "gtceu:large_packer", "gtceu:large_assembler", "gtceu:large_circuit_assembler", "gtceu:large_arc_smelter", "gtceu:large_engraving_laser", "gtceu:large_sifting_funnel", "gtceu:blast_alloy_smelter", "gtceu:large_autoclave", "gtceu:large_material_press", "gtceu:large_brewer", "gtceu:large_cutter", "gtceu:large_distillery", "gtceu:large_extractor", "gtceu:large_extruder", "gtceu:large_solidifier", "gtceu:large_wiremill", "gtceu:mega_blast_furnace", "gtceu:mega_vacuum_freezer"
     )
     // PNC manually added to nukelist
     global.nukeList.push()
