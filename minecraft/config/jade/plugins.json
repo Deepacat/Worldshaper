@@ -51,9 +51,6 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
-  "jadeaddons": {
-    "equipment_requirement": ""
-  },
   "pneumaticcraft": {
     "pneumatic": true,
     "tube_module": true,
@@ -85,20 +82,6 @@
   "fulleng": {
     "storage_monitor": true
   },
-  "supplementaries": {
-    "hat_stand": true
-  },
-  "create": {
-    "filter": true,
-    "backtank_capacity": true,
-    "goggles.requires_goggles": true,
-    "goggles": false,
-    "blaze_burner": true,
-    "exact_block": true,
-    "crafting_blueprint": true,
-    "goggles.detailed": false,
-    "placard": true
-  },
   "jade": {
     "coordinates.rel": false,
     "distance": false,
@@ -111,8 +94,8 @@
     "jade_chamber": true,
     "jade_wireless": true
   },
-  "waystones": {
-    "waystone": true
+  "mcjtylib": {
+    "jadeaddons": true
   },
   "custommachinery": {
     "machine_component_provider": true
@@ -128,5 +111,28 @@
     "power_storage": true,
     "crafting_monitor": true,
     "part_name": true
+  },
+  "modularrouters": {
+    "router": true
+  },
+  "jadeaddons": {
+    "equipment_requirement": ""
+  },
+  "supplementaries": {
+    "hat_stand": true
+  },
+  "create": {
+    "filter": true,
+    "backtank_capacity": true,
+    "goggles.requires_goggles": true,
+    "goggles": false,
+    "blaze_burner": true,
+    "exact_block": true,
+    "crafting_blueprint": true,
+    "goggles.detailed": false,
+    "placard": true
+  },
+  "waystones": {
+    "waystone": true
   }
 }
