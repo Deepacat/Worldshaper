@@ -3,7 +3,8 @@ StartupEvents.registry('item', event => {
     for(let i = 0; i < volts.length; i++){
         event.create(volts[i][0].toLowerCase()+'_upgrade_kit')
             .maxStackSize(16)
-            .glow(true)
+            .rarity(3)
             .displayName(`${volts[i][1]}${volts[i][0]} Upgrade Kit`)
+            .tag('kubejs:upgrade_kit')
     }
 })

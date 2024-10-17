@@ -4,9 +4,10 @@
  * This script loads first before the other startup scripts.
  * Put your utility functions or global vars here so that you can access them in other scripts
  */
+Platform.mods.kubejs.name = 'SHAPE Program'
 
 // Spoof our custom items' mod name
-Platform.mods.kubejs.name = "Shape Program"
+// Platform.mods.kubejs.name = "Shape Program"
 
 /**
  * Capitalizes the first char of the string
