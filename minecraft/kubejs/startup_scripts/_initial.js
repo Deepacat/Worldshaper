@@ -6,7 +6,7 @@
  */
 
 // Spoof our custom items' mod name
-Platform.mods.kubejs.name = "SHAPE Program"
+Platform.mods.kubejs.name = "Shape Program"
 
 /**
  * Capitalizes the first char of the string
@@ -35,28 +35,27 @@ global.compList = [
     "#gtceu:emitters",
     "#gtceu:sensors"
 ]
-global.voltageRegex = ['ulv_', 'lv_', 'mv_', 'hv_', 'ev_', 'iv_', 'luv_', 'zpm_', 'uv_', 'uhv_']
 
-// Defines the current packs max voltage for recipe sake
+global.voltageRegex = ['ulv_', 'lv_', 'mv_', 'hv_', 'ev_', 'iv_', 'luv_', 'zpm_', 'uv_', 'uhv_']
+// Defines the current packs max voltage for item hiding sake
 global.maxVoltage = 1
+
+// list of regex's to nuke
+let regexToNuke = [
+    // comps
+    'board', 'chip', 'wafer', 'boule', 'transistor', 'resistor', 'capacitor', 'diode', 'inductor', 'soc', 'cpu',
+    // materials (WOW THIS IS AWFUL)
+    'hastelloy_c_276', 'titanium_tungsten_carbide', 'titanium_carbide', 'stellite_100', 'hastelloy_x', 'maraging_steel_300', 'incoloy_ma_956', 'watertight_steel', 'zeron_100', 'molybdenum_disilicide', 'hsla_steel', 'tantalum_carbide', 'blue_alloy', 'hsss', 'hsse', 'hssg', 'red_alloy', 'blue_steel', 'red_steel', 'borosilicate_glass', 'potin', 'ruthenium_trinium_americium_neutronate', 'enriched_naquadah_trinium_europium_duranide', 'uranium_rhodium_dinaquadide', 'indium_tin_barium_titanium_cuprate', 'samarium_iron_arsenic_oxide', 'uranium_triplatinum', 'mercury_barium_calcium_cuprate', 'magnesium_dioboride', 'manganese_phosphide', 'tungsten_carbide', 'nickel_zinc_ferrite', 'indium_gallium_phosphide', 'gallium_arsenide', 'yttrium_barium_cuprate', 'vanadium_gallium', 'magnalium', 'niobium_nitride', 'niobium_titanium', 'bismith_bronze', 'black_bronze', 'rose_gold', 'sterling_silver', 'samarium', 'tantalum', 'yttrium', 'plutonium_241', 'niobium', 'neodymium', 'molybdenum', 'manganese', 'bismuth', 'beryllium', 'cobalt', 'damascus_steel', 'black_steel', 'opal', 'red_garnet', 'yellow_garnet', 'olivine', 'sodalite', 'lazurite', 'ruby', 'sapphire', 'blue_topaz', 'emerald', 'green_sapphire', 'topaz', 'amethyst', 'echo_shard'
+]
 
 // create nukelist
 global.nukeList = []
 
 // doing nukelist stuff inside of item modification since its post registry to access items
-
 ItemEvents.modification(e => {
-    // list of regex's to nuke
-    let regexToNuke = [
-        // comps
-        'board', 'chip', 'wafer', 'boule', 'transistor', 'resistor', 'capacitor', 'diode', 'inductor', 'soc', 'cpu',
-        // materials (WOW THIS IS AWFUL)
-        'hastelloy_c_276', 'titanium_tungsten_carbide', 'titanium_carbide', 'stellite_100', 'hastelloy_x', 'maraging_steel_300', 'incoloy_ma_956', 'watertight_steel', 'zeron_100', 'molybdenum_disilicide', 'hsla_steel', 'tantalum_carbide', 'blue_alloy', 'hsss', 'hsse', 'hssg', 'red_alloy', 'blue_steel', 'red_steel', 'borosilicate_glass', 'potin', 'ruthenium_trinium_americium_neutronate', 'enriched_naquadah_trinium_europium_duranide', 'uranium_rhodium_dinaquadide', 'indium_tin_barium_titanium_cuprate', 'samarium_iron_arsenic_oxide', 'uranium_triplatinum', 'mercury_barium_calcium_cuprate', 'magnesium_dioboride', 'manganese_phosphide', 'tungsten_carbide', 'nickel_zinc_ferrite', 'indium_gallium_phosphide', 'gallium_arsenide', 'yttrium_barium_cuprate', 'vanadium_gallium', 'magnalium', 'niobium_nitride', 'niobium_titanium', 'bismith_bronze', 'black_bronze', 'rose_gold', 'sterling_silver', 'samarium', 'tantalum', 'yttrium', 'plutonium_241', 'niobium', 'neodymium', 'molybdenum', 'manganese', 'bismuth', 'beryllium', 'cobalt', 'damascus_steel', 'black_steel', 'opal', 'red_garnet', 'yellow_garnet', 'olivine', 'sodalite', 'lazurite', 'ruby', 'sapphire', 'blue_topaz', 'emerald', 'green_sapphire', 'topaz', 'amethyst', 'echo_shard'
-    ]
-
     // add tiered items regex's to nuke list,
     global.voltageRegex.forEach(regex => {
-        if(global.voltageRegex.indexOf(regex) > global.maxVoltage)
+        if (global.voltageRegex.indexOf(regex) > global.maxVoltage)
             regexToNuke.push(regex)
     })
 
@@ -69,7 +68,7 @@ ItemEvents.modification(e => {
                 global.nukeList = global.nukeList.concat(item)
         })
     })
-    
+
     // GT manually added to nukelist
     global.nukeList.push(
         // gcyms
@@ -84,5 +83,5 @@ ItemEvents.modification(e => {
     // Misc manually added to nukelist
     global.nukeList.push()
 
-    console.log(global.nukeList)
+    // console.log(global.nukeList)
 })
