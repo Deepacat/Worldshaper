@@ -22,3 +22,6 @@ StartupEvents.registry('item', event => {
         .tag('kubejs:science_pack')
 })
 
+GTCEuStartupEvents.registry('item', event => {
+    
+})

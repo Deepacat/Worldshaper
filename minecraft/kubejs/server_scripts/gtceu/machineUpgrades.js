@@ -3,7 +3,6 @@ BlockEvents.rightClicked(e => {
     if (e.hand != 'MAIN_HAND') return
     if (e.block.entityData == null) return
 
-    const rawData = e.block.entityData
     let machineData = e.block.entityData.toString()
     let mainHand = e.player.getMainHandItem().id
 
@@ -14,22 +13,15 @@ BlockEvents.rightClicked(e => {
         ) {
             let machinetier = global.voltageTiers.indexOf(getVoltage(e.block.getId()))
             let itemtier = global.voltageTiers.indexOf(getVoltage(mainHand))
-            if(machinetier + 1 == itemtier){
+            if (machinetier + 1 == itemtier) {
                 // upgrade passed
-                e.level.getBlock(e.block.pos).set(e.block.id.replace(getVoltage(e.block.getId()), getVoltage(mainHand)), rawData)
+                // setting block like this doesnt work with nbt really well, command works better unfortunately
+                // e.level.getBlock(e.block.pos).set(e.block.id.replace(getVoltage(e.block.getId()), getVoltage(mainHand)))
+                let facing = e.block.getBlockState().getValue(e.block.getBlockState().getProperties().toArray()[0]).name().toLowerCase();
                 e.item.count--
+                e.level.getBlock(e.block.pos).set('minecraft:air')
+                e.server.runCommandSilent(`execute in ${e.level.dimension} run setblock ${e.block.pos.x} ${e.block.pos.y} ${e.block.pos.z} ${e.block.id.replace(getVoltage(e.block.getId()), getVoltage(mainHand))}[facing=${facing}]${machineData}`)
             }
         }
     }
 })
-
-// BlockEvents.rightClicked(e => {
-//     if (e.hand != 'MAIN_HAND') return
-//     if (e.block.entityData == null) return
-
-//     if (e.player.crouching && e.player.getMainHandItem().id == Item.of('minecraft:diamond') && e.block.getId() == 'minecraft:chest') {
-//         e.player.tell('test')
-//         e.level.getBlock(e.block.pos).set('minecraft:barrel')
-//         e.block.getEntityData() = e.block.entityData
-//     }
-// })
