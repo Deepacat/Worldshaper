@@ -18,7 +18,7 @@ StartupEvents.registry('item', event => {
     event.create('ulv_science_pack')
         .maxStackSize(64)
         .rarity(3)
-        .displayName('&8ULV Science Pack')
+        .displayName('§8ULV Science Pack')
         .tag('kubejs:science_pack')
 })
 

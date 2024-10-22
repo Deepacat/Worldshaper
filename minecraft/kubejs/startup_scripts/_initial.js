@@ -37,7 +37,7 @@ global.compList = [
     "#gtceu:sensors"
 ]
 
-global.voltageRegex = ['ulv_', 'lv_', 'mv_', 'hv_', 'ev_', 'iv_', 'luv_', 'zpm_', 'uv_', 'uhv_']
+global.voltageTiers = ['ulv', 'lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv']
 // Defines the current packs max voltage for item hiding sake
 global.maxVoltage = 1
 
@@ -55,9 +55,9 @@ global.nukeList = []
 // doing nukelist stuff inside of item modification since its post registry to access items
 ItemEvents.modification(e => {
     // add tiered items regex's to nuke list,
-    global.voltageRegex.forEach(regex => {
-        if (global.voltageRegex.indexOf(regex) > global.maxVoltage)
-            regexToNuke.push(regex)
+    global.voltageTiers.forEach(tier => {
+        if (global.voltageTiers.indexOf(tier) > global.maxVoltage)
+            regexToNuke.push(tier+'_')
     })
 
     // add items to nuke list from the regex's
@@ -72,7 +72,7 @@ ItemEvents.modification(e => {
 
     // GT manually added to nukelist
     global.nukeList.push(
-        // gcyms
+        // GcyMs
         "gtceu:large_maceration_tower", "gtceu:large_chemical_bath", "gtceu:large_centrifuge", "gtceu:large_mixer", "gtceu:large_electrolyzer", "gtceu:large_electromagnet", "gtceu:large_packer", "gtceu:large_assembler", "gtceu:large_circuit_assembler", "gtceu:large_arc_smelter", "gtceu:large_engraving_laser", "gtceu:large_sifting_funnel", "gtceu:blast_alloy_smelter", "gtceu:large_autoclave", "gtceu:large_material_press", "gtceu:large_brewer", "gtceu:large_cutter", "gtceu:large_distillery", "gtceu:large_extractor", "gtceu:large_extruder", "gtceu:large_solidifier", "gtceu:large_wiremill", "gtceu:mega_blast_furnace", "gtceu:mega_vacuum_freezer"
     )
     // PNC manually added to nukelist

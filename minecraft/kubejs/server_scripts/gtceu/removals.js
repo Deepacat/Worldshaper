@@ -1,6 +1,6 @@
 ServerEvents.recipes(e => {
     // remove recipes from 90% of gt machines/blocks/tiered items
-    global.voltageRegex.forEach(dn => {
+    global.voltageTiers.forEach(dn => {
         e.remove({ mod: 'gtceu', output: dn })
     })
     // remove recipes for circuits and uses of circuits
