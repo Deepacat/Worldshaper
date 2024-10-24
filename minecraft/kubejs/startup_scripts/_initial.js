@@ -25,6 +25,12 @@ const placeHolder = (registry, name) => {
     registry.create(name).texture('kubejs:item/barrier').displayName(`§eT. B. I. §r- §d${name.split('_').map(v => capitalize(v))}`);
 }
 
+global.machineList = [ 'electric_furnace', 'alloy_smelter', 'arc_furnace', 'assembler', 'autoclave', 'bender', 'brewery', 'canner', 'centrifuge', 'chemical_bath', 'chemical_reactor', 'compressor', 'cutter', 'distillery', 'electrolyzer', 'electromagnetic_seperator', 'extractor', 
+    'extruder', 'fermenter', 'fluid_heater', 'fluid_solidifier', 'forge_hammer', 'forming_press', 'lathe', 'scanner', 'mixer', 'ore_washer', 'packer', 'polarizer', 'laser_engraver', 'sifter', 'thermal_centrifuge', 'wiremill', 'circuit_assembler', 'macerator', 'gas_collector'
+]
+
+global.ulvBlacklist = ['canner', 'chemical_bath', 'autoclave', 'ore_washer', 'arc_furnace', 'fermenter', 'fluid_heater', 'brewery', 'fluid_solidifier']
+
 global.compList = [
     "#gtceu:electric_motors",
     "#gtceu:electric_pumps",

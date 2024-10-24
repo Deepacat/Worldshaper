@@ -21,7 +21,3 @@ StartupEvents.registry('item', event => {
         .displayName('§8ULV Science Pack')
         .tag('kubejs:science_pack')
 })
-
-GTCEuStartupEvents.registry('item', event => {
-    
-})

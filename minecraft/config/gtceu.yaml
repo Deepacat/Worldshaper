@@ -546,6 +546,10 @@ dev:
   # Default: false (no placement printout in debug.log)
   debugWorldgen: false
 
+  # Generate ores in superflat worlds?
+  # Default: false
+  doSuperflatOres: false
+
   # Dump all registered GT recipes?
   # Default: false
   dumpRecipes: false
