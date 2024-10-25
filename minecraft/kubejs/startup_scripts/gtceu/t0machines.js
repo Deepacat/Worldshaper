@@ -1,7 +1,23 @@
+GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
+    event.create('steam_mixer')
+        .category('steam')
+        .setEUIO('in')
+        .setMaxIOSize(6, 1, 0, 1)
+        .setSlotOverlay(false, false, GuiTextures.COMPRESSOR_OVERLAY)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_MIXER, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.MIXER)
+})
+
 GTCEuStartupEvents.registry('gtceu:machine', event => {
+    // Steam Machines
+    // event.create('steam_mixer', 'simple', 0, GTValues.STEAM)
+    //     .rotationState(RotationState.NON_Y_AXIS)
+    //     .recipeType(GTRecipeTypes.STEAM_MIXER_RECIPES, true, true)
+    //     .workableTieredHullRenderer('gtceu:block/machines/mixer')
+    // ULV Machines
     event.create('mixer', 'simple', 0, GTValues.ULV)
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeType(GTRecipeTypes.MIXER_RECIPES, true, true)
+        .recipeType('steam_mixer', true, true)
         .workableTieredHullRenderer('gtceu:block/machines/mixer')
     event.create('autoclave', 'simple', 0, GTValues.ULV)
         .rotationState(RotationState.NON_Y_AXIS)
@@ -80,4 +96,3 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .recipeType(GTRecipeTypes.EXTRUDER_RECIPES, true, true)
         .workableTieredHullRenderer('gtceu:block/machines/extruder')
 })
-

@@ -1,4 +1,6 @@
 BlockEvents.rightClicked(e => {
+    const {x, y, z} = e.block;
+
     function getVoltage(item) { return item.toString().slice(item.toString().indexOf(':') + 1, item.toString().indexOf('_')) }
     if (e.hand != 'MAIN_HAND') return
     if (e.block.entityData == null) return
@@ -20,7 +22,8 @@ BlockEvents.rightClicked(e => {
                 // remove upgrade kit 
                 e.item.count--
                 //  adding ${machineData} to pass the nbt results in the block copying data and ejecting items which dupes right now..
-                e.server.runCommandSilent(`execute in ${e.level.dimension} run setblock ${e.block.pos.x} ${e.block.pos.y} ${e.block.pos.z} ${machineNextTier}[facing=${facing}]`)
+                e.server.runCommandSilent(`execute in ${e.level.dimension} run setblock ${x} ${y} ${z} ${machineNextTier}[facing=${facing}]`)
+                e.player.server.runCommandSilent(`playsound gtceu:wrench player @p ${x} ${y} ${z}`);
             }
         }
     }
