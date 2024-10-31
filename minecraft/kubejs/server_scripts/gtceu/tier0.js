@@ -1,37 +1,60 @@
 ServerEvents.recipes(e => {
     e.forEachRecipe({ type: "gtceu:mixer" }, recipe => {
         let r = JSON.parse(recipe.json)
-        // console.log(r)
+
+        if (r.inputs.fluid) { return }
 
         let EUt = (r.tickInputs && r.tickInputs.eu) ? r.tickInputs.eu[0].content : null
         if (!(EUt <= 8)) { //Reject recipes that cost more than 8 eu/t, check is done like this to filter out null
             return
         }
 
-        if (r.inputs.fluid) { return }
         let outputs = r.outputs.item
         if (!outputs || outputs[0].content.type != "gtceu:sized" || !outputs[0].content.ingredient.item) { //Not sure if outputs other than "item" are possible. Check to be safe
             return
         }
-        // r.inputs.item.forEach(items => {
-        //     console.log(items)
-        // })
-        // r.inputs['item'].forEach(item => {
-        //     console.log(item)
-        // })
 
-        // console.log('------------------')
-        // e.recipes.gtceu.steam_mixer(`kubejs:gtceu/steam_mixer/${recipe.getId().split(':')[1]}`)
-        //     .itemInputs('dirt')
-        //     .itemOutputs('diamond')
-        //     .duration(r.duration)
-        //     .EUt(7)
+        console.log()
+
+        r.inputs.item.forEach(items => {
+            if (items.content.type == "gtceu:circuit") { return }
+            console.log(`${recipe.id} item: ${Ingredient.of(items.content.ingredient).getItemIds()[0]}`)
+            console.log(`${recipe.id} count: ${items.content.count}`)
+        })
     })
 })
 
 ServerEvents.recipes(e => {
-    e.recipes.gtceu.steam_mixer(`kubejs:gtceu/steam_mixer/test`)
-        .itemInputs('dirt')
+    e.recipes.gtceu.steam_mixer(`kubejs:gtceu/steam_mixer/test2`)
+        .itemInputs(
+            Ingredient.of(
+                {
+                    "ingredient": { "tag": "forge:dusts/iron" }
+                }
+            ).withCount(4)
+        )
+        .itemOutputs('diamond')
+        .duration(60)
+        .EUt(7)
+
+    e.recipes.gtceu.steam_mixer(`kubejs:gtceu/steam_mixer/test3`)
+        .itemInputs(
+            Ingredient.of(
+                {
+                    "ingredient": { "tag": "forge:dusts/iron" }
+                }
+            ).withCount(4),
+            Ingredient.of(
+                {
+                    "ingredient": { "tag": "forge:dusts/gold" }
+                }
+            ).withCount(5),
+            Ingredient.of(
+                {
+                    "ingredient": { "tag": "forge:dusts/copper" }
+                }
+            ).withCount(6)
+        )
         .itemOutputs('diamond')
         .duration(60)
         .EUt(7)
@@ -102,4 +125,5 @@ ServerEvents.recipes(e => {
     //     tickInputChanceLogics: {},
     //     tickOutputChanceLogics: {}
     // }).id('kubejs:gtceu/steam_mixer/test')
+
 })
