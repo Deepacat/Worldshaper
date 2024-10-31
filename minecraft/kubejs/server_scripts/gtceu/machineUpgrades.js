@@ -28,3 +28,9 @@ BlockEvents.rightClicked(e => {
         }
     }
 })
+
+ItemEvents.rightClicked("minecraft:gold_ingot", e => {
+    let { x, y, z } = e.player
+    e.player.server.runCommandSilent(`playsound minecraft:item.flintandsteel.use player @p ${x} ${y} ${z}`);
+   // event.server.playSound(soundID, volume, pitch);    // Play sound at the player's position
+})

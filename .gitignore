@@ -11,6 +11,7 @@ modlist.html
 !minecraft/options.txt
 !minecraft/config/emi.json
 !minecraft/config/icon.png
+!minecraft/mods/worldshaper*
 
 # minecraft/kubejs/data/minecraft/tags*
 # minecraft/kubejs/data/minecraft/worldgen*
