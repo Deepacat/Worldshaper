@@ -26,6 +26,8 @@
 	#determines how far from bottom the subterranodon flight indicator renders on the screen when mounted.
 	#Range: -12000 ~ 12000
 	subterranodon_indicator_y = 6
+	#true if sugar rush makes the world more saturated. May conflict with shaders.
+	sugar_rush_saturation_effect = true
 
 [audio]
 	#whether nuclear explosions briefly muffle other sounds.

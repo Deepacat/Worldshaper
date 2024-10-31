@@ -273,6 +273,17 @@
 			x: 1.5d
 			y: 6.0d
 		}
+		{
+			id: "67A449C4C7619441"
+			subtitle: "This questbook and all it has is completely conceptual and is far from what will be  actually added, I made this purely as a way to visualize my thinking"
+			tasks: [{
+				id: "36ED2060F697E774"
+				title: "DEV QUESTBOOK INFO"
+				type: "checkmark"
+			}]
+			x: 0.5d
+			y: -2.5d
+		}
 	]
 	title: "Progression"
 }
