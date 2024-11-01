@@ -1,9 +1,6 @@
 ServerEvents.recipes(e => {
     e.forEachRecipe({ type: "gtceu:mixer" }, recipe => {
         let r = JSON.parse(recipe.json)
-        if (r.outputs.fluid){
-            console.log(r.outputs.fluid)
-        }
         if (r.inputs.fluid) { return }
 
         let EUt = (r.tickInputs && r.tickInputs.eu) ? r.tickInputs.eu[0].content : null
@@ -12,9 +9,6 @@ ServerEvents.recipes(e => {
         }
 
         let outputs = r.outputs.item
-        // if (!outputs || outputs[0].content.type != "gtceu:sized" || !outputs[0].content.ingredient.item) { //Not sure if outputs other than "item" are possible. Check to be safe
-        //     return
-        // }
 
         let toInput = []
 
