@@ -8,4 +8,7 @@ ServerEvents.recipes(e => {
     // e.remove({ input: '#gtceu:circuits' })
     // e.remove({ mod: 'gtceu', output: '#forge:rotor', type: 'minecraft:crafting' })
     // e.remove({ mod: 'gtceu', output: '#forge:hot_ingots' })
+
+    // The beginning of suffering.
+    e.remove({ mod: "gtceu" })
 })
