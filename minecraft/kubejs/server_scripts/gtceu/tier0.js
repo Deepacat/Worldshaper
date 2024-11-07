@@ -24,7 +24,7 @@ ServerEvents.recipes(e => {
         let toOutput = Item.of(Ingredient.of(outputs[0].content.ingredient), outputs[0].content.count)
 
 
-        e.recipes.gtceu.steam_mixer(`kubejs:gtceu/steam_mixer/${recipe.getId().split(':')[1]}`)
+        e.recipes.gtceu.steam_mixer_recipes(`kubejs:gtceu/steam_mixer/${recipe.getId().split(':')[1]}`)
             .itemInputs(toInput)
             .itemOutputs(toOutput)
             .outputFluids()
