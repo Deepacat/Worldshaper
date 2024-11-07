@@ -4,16 +4,16 @@ JEIEvents.hideItems(event => {
     event.hide(/gtceu:.*raw.*block/)
 
     // hide nukelist
-    event.hide(global.nukeList)
+    // event.hide(global.nukeList)
 })
 
 // DEV STUFF BELOW HERE
 
 // add tooltip to nuked items
 ItemEvents.tooltip(event => {
-    global.nukeList.forEach(i => {
-        event.add(i, '§c§l - - - - NUKED - - - - ')
-    })
+    // global.nukeList.forEach(i => {
+    //     event.add(i, '§c§l - - - - NUKED - - - - ')
+    // })
 })
 
 // change nukelist textures (Only works on generic items)
