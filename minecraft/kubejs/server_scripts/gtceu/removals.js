@@ -1,3 +1,4 @@
+//priority: 999
 ServerEvents.recipes(e => {
     // remove recipes from 90% of gt machines/blocks/tiered items
     // global.voltageTiers.forEach(dn => {
