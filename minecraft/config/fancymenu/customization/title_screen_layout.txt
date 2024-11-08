@@ -3,7 +3,7 @@ type = fancymenu_layout
 layout-meta {
   identifier = title_screen
   render_custom_elements_behind_vanilla = false
-  last_edited_time = 1731047374932
+  last_edited_time = 1731047428874
   is_enabled = true
   randommode = false
   randomgroup = 1
@@ -298,8 +298,8 @@ vanilla_button {
   fade_out_speed = 1.0
   base_opacity = 1.0
   auto_sizing = false
-  auto_sizing_base_screen_width = 0
-  auto_sizing_base_screen_height = 0
+  auto_sizing_base_screen_width = 1858
+  auto_sizing_base_screen_height = 1058
   sticky_anchor = false
   anchor_point = mid-centered
   x = -173
