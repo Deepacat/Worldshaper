@@ -39,7 +39,7 @@ global.compList = [
 
 global.voltageTiers = ['ulv', 'lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv']
 // Defines the current packs max voltage for item hiding sake
-global.maxVoltage = 1
+global.maxVoltage = 4
 
 // list of regex's to nuke
 let regexToNuke = [
