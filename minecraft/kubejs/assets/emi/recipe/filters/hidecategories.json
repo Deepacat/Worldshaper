@@ -1,0 +1,36 @@
+{
+    "filters": [
+        {
+            "category": "minecraft:grinding"
+        },
+        {
+            "id": "/bucket/",
+            "category": "emi:world_interaction"
+        },
+        {
+            "id": "/repair/",
+            "category": "emi:anvil_repairing"
+        },
+        {
+            "category": "ae2:entropy"
+        },
+        {
+            "category": "create:automatic_shaped" 
+        },
+        {
+            "category": "create:automatic_shapeless" 
+        },
+        {
+            "category": "create:automatic_brewing" 
+        },
+        {
+            "category": "create:automatic_packing" 
+        },
+        {
+            "category": "create:draining" 
+        },
+        {
+            "category": "gtceu:create_mixer" 
+        }
+    ]
+}

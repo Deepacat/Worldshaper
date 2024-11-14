@@ -1,0 +1,8 @@
+{
+    "filters": [
+      {
+        "type": "minecraft:smithing",
+        "id": ".*trim"
+      }
+    ]
+  }

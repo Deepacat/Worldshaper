@@ -1,6 +1,6 @@
 //priority: 999
 ServerEvents.recipes(e => {
-    // The beginning of suffering.
+    // The beginning of suffering. (Nukes most gt recipes except ones my ass is not making a builder for)
     e.remove({
         mod: "gtceu",
         not: [
@@ -18,6 +18,17 @@ ServerEvents.recipes(e => {
             { type: "gtceu:compressor" }
         ]
     })
+
+    e.remove({ type: "gtceu:extruder", output: /.*rod/, not: { output: /.*long.*/ } })
+
+    e.remove({ mod: "pneumaticcraft" })
+
+    e.remove([
+        { type: "ad_astra:compressing" },
+        { type: "ad_astra:alloying" },
+        { type: "createaddition:rolling" },
+        { type: "create:pressing" }
+    ])
 
     // Remove recipes for all the things added to nukelist
     global.nukeList.forEach((item) => {
