@@ -4,12 +4,13 @@ JEIEvents.hideItems(event => {
     event.hide(/gtceu:.*raw.*block/)
 
     // hide nukelist
-    event.hide(global.nukeList)
 })
 
 // DEV STUFF BELOW HERE
+
+// add tooltip to nuked items
+
 if (global.devMode) {
-    // add tooltip to nuked items
     ItemEvents.tooltip(event => {
         global.nukeList.forEach(i => {
             event.add(i, '§c§l - - - - NUKED - - - - ')
@@ -30,4 +31,9 @@ if (global.devMode) {
     //         })
     //     })
     // })
+} else {
+    JEIEvents.hideItems(event => {
+        // hide nukelist
+        event.hide(global.nukeList)
+    })
 }
