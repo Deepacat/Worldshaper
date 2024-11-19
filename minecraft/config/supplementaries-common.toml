@@ -291,6 +291,8 @@
 		#Duration in seconts of speed effect garanted to horses that eat a sugar cube
 		#Range: 0 ~ 1000
 		horse_speed_duration = 10
+		#Makes sugar cubes dissolve in rain
+		dissolve_in_rain = true
 
 	[building.planter]
 		enabled = true

@@ -53,7 +53,7 @@
 	#True if the Nuclear Furnace only uses 'Blasting' recipes, false to use all smelting recipes.
 	nuclear_furnace_blasting_only = true
 	#True if the Nuclear Furnace should only use recipes using the `alexscaves:nuclear_furnace` recipe type, false to use regular behavior.
-	nuclear_furnace_custom_type = false
+	nuclear_furnace_custom_type = true
 
 [item-behavior]
 	#True if one Cave Codex is all that is needed to unlock every Cave Compendium entry.
