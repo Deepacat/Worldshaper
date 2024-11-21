@@ -1,25 +1,3 @@
-ServerEvents.recipes(event => {
-    // lock crafting table recipe id behind the 'table' gamestage
-    // requires the gamestage recipes addon!
-    event.stage('minecraft:crafting_table', 'table')
-    
-    // lock new shapeless recipe behind gamestage 'stone"
-    // works with base kjs and gamestages
-    event.shaped(
-        Item.of('minecraft:stone', 3),
-        [
-          'A B',
-          ' C ', 
-          'B A'
-        ],
-        {
-          A: 'minecraft:andesite',
-          B: 'minecraft:diorite',  
-          C: 'minecraft:granite'
-        }
-    ).stage('stone') 
-})
-
 let selectedQuest = '6161FE4CC69F1EB5'
 let questPacks = []
 let researchNum = 0
