@@ -2,7 +2,7 @@
   "type": "worldshaper:magnetic",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "minecraft:overworld",
+    "settings": "worldshaper:wsoverworld",
     "biome_source": {
       "type": "minecraft:fixed",
       "biome": "alexscaves:magnetic_caves"

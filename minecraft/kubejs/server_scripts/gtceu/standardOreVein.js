@@ -15,7 +15,7 @@ GTCEuServerEvents.oreVeins(event => {
         vein.density(0.8)
         vein.discardChanceOnAirExposure(1)
         vein.layer("owstones")
-        vein.dimensions("minecraft:overworld", "worldshaper:semiflat")
+        vein.dimensions("minecraft:overworld", "worldshaper:wsoverworld")
         vein.heightRangeUniform(35, 60)
         vein.layeredVeinGenerator(generator => generator
             .buildLayerPattern(pattern => pattern
@@ -32,7 +32,7 @@ GTCEuServerEvents.oreVeins(event => {
         vein.density(0.8)
         vein.discardChanceOnAirExposure(1)
         vein.layer("owstones")
-        vein.dimensions("minecraft:overworld", "worldshaper:semiflat")
+        vein.dimensions("minecraft:overworld", "worldshaper:wsoverworld")
         vein.heightRangeUniform(35, 60)
         vein.layeredVeinGenerator(generator => generator
             .buildLayerPattern(pattern => pattern
@@ -49,7 +49,7 @@ GTCEuServerEvents.oreVeins(event => {
         vein.density(0.8)
         vein.discardChanceOnAirExposure(1)
         vein.layer("owstones")
-        vein.dimensions("minecraft:overworld", "worldshaper:semiflat")
+        vein.dimensions("minecraft:overworld", "worldshaper:wsoverworld")
         vein.heightRangeUniform(35, 60)
         vein.layeredVeinGenerator(generator => generator
             .buildLayerPattern(pattern => pattern
@@ -65,7 +65,7 @@ GTCEuServerEvents.oreVeins(event => {
         vein.density(0.8)
         vein.discardChanceOnAirExposure(1)
         vein.layer("owstones")
-        vein.dimensions("minecraft:overworld", "worldshaper:semiflat")
+        vein.dimensions("minecraft:overworld", "worldshaper:wsoverworld")
         vein.heightRangeUniform(35, 60)
         vein.layeredVeinGenerator(generator => generator
             .buildLayerPattern(pattern => pattern

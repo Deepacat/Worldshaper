@@ -1,5 +1,5 @@
 {
-  "dimension": "worldshaper:semiflat",
+  "dimension": "worldshaper:wsoverworld",
   "gravity": 9.807,
   "orbit": "ad_astra:earth_orbit",
   "oxygen": true,

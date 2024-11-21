@@ -2,7 +2,7 @@
   "type": "worldshaper:abyssal",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "minecraft:overworld",
+    "settings": "worldshaper:wsoverworld",
     "biome_source": {
       "type": "minecraft:fixed",
       "biome": "alexscaves:abyssal_chasm"
