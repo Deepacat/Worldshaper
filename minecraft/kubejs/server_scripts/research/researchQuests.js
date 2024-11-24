@@ -1,44 +1,53 @@
 let selectedQuest = '6161FE4CC69F1EB5'
-let questPacks = []
+let quests = []
 let researchNum = 0
 
-function createResearchTask(itemIcon, questName, taskid, scienceList, amount) {
-    let quest = [taskid, scienceList]
-    questPacks.push(quest)
+
+function createResearchTask(itemIcon, questName, questObj) {
+    questObj.tasks.forEach(task => {
+        FTBQuestsEvents.customTask(task.taskId, event => {
+            event.maxProgress = task.amount
+        })
+    })
     
-    FTBQuestsEvents.customTask(taskid, event => {
-        event.maxProgress = amount
+    researchMenu.addSlot({
+        page: 0,
+        x: researchNum,
+        y: 0,
+        label: questName,
+        item: itemIcon,
+        tooltip: "questid: " + questObj.mainQuest,
+        onLeftClicked: (player) => {
+            player.sendSystemMessage("Selected quest: " + questName + " (" + questObj.mainQuest + ")");
+            selectedQuest = questObj.mainQuest
+        }
     })
 
-    researchMenu.addSlot({
-        page: 0, 
-        x: researchNum, 
-        y: 0,
-        label: questName, 
-        item: itemIcon, 
-        tooltip: "questid: " + taskid,
-        onLeftClicked: (player) =>{
-            player.sendSystemMessage("Selected quest: " + questName + " (" + taskid + ")");
-            selectedQuest = taskid
-        }});
-
-    researchNum++
+    // researchNum++
 }
 
 // createResearchTask('test1', '1', ['red', 'green', 'blue'], 100)
 // createResearchTask('test2', '2', ['red', 'green', 'blue', 'yellow'], 100)
-createResearchTask('gtceu:steam_grinder' , 'Grinder', '6161FE4CC69F1EB5', ['red', 'green'], 100)  //grinder
-createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
-createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
-createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
-createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
-createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
-createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
-createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
-createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
-createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
-createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
-createResearchTask('gtceu:bronze_large_boiler' , 'Boiler', '449284A79D58CE0A', ['red', 'green'], 100)  //boiler
+createResearchTask('gtceu:steam_grinder', 'Grinder',
+    {
+        mainQuest: "73724D642AE2BDF0",
+        tasks: [
+            {
+                taskId: "4B7FB5C549E80CDF",
+                science: "lv",
+                amount: 100
+            },
+            {
+                taskId: "6143FE8D361B12DB",
+                science: "mv",
+                amount: 25
+            }
+        ]
+    }
+)
+
+// createResearchTask('gtceu:bronze_large_boiler', 'Boiler', '449284A79D58CE0A', )  //boiler
+
 
 // WORKING
 // function breakBlockQuest(taskID, playerData, amount, silkTouchAllowed, blockList) {
