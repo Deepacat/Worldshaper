@@ -1,15 +1,16 @@
-let selectedQuest = '6161FE4CC69F1EB5'
-let quests = []
+let selectedQuest = '73724D642AE2BDF0'
+let questObjs = []
 let researchNum = 0
 
-
 function createResearchTask(itemIcon, questName, questObj) {
+    questObjs.push(questObj)
+
     questObj.tasks.forEach(task => {
         FTBQuestsEvents.customTask(task.taskId, event => {
             event.maxProgress = task.amount
         })
     })
-    
+
     researchMenu.addSlot({
         page: 0,
         x: researchNum,
@@ -22,24 +23,21 @@ function createResearchTask(itemIcon, questName, questObj) {
             selectedQuest = questObj.mainQuest
         }
     })
-
-    // researchNum++
+    researchNum++
 }
 
-// createResearchTask('test1', '1', ['red', 'green', 'blue'], 100)
-// createResearchTask('test2', '2', ['red', 'green', 'blue', 'yellow'], 100)
 createResearchTask('gtceu:steam_grinder', 'Grinder',
     {
         mainQuest: "73724D642AE2BDF0",
         tasks: [
             {
-                taskId: "4B7FB5C549E80CDF",
-                science: "lv",
+                taskId: '6161FE4CC69F1EB5',
+                science: "kubejs:lv_science_pack",
                 amount: 100
             },
             {
-                taskId: "6143FE8D361B12DB",
-                science: "mv",
+                taskId: '3313EC2C07C250C9',
+                science: "kubejs:mv_science_pack",
                 amount: 25
             }
         ]

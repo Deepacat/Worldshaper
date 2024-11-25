@@ -10,10 +10,18 @@
 		{
 			icon: "gtceu:steam_grinder"
 			id: "73724D642AE2BDF0"
-			tasks: [{
-				id: "6161FE4CC69F1EB5"
-				type: "custom"
-			}]
+			tasks: [
+				{
+					id: "6161FE4CC69F1EB5"
+					title: "Lv"
+					type: "custom"
+				}
+				{
+					id: "3313EC2C07C250C9"
+					title: "Mv"
+					type: "custom"
+				}
+			]
 			title: "grinder"
 			x: 0.5d
 			y: 1.5d
@@ -23,6 +31,7 @@
 			id: "3DD9E38EBBDEA66A"
 			tasks: [{
 				id: "449284A79D58CE0A"
+				title: "lv"
 				type: "custom"
 			}]
 			title: "boiler"
@@ -64,6 +73,63 @@
 			title: "electric blast furnace"
 			x: -2.5d
 			y: 4.0d
+		}
+		{
+			id: "209768AB004AB79C"
+			tasks: [
+				{
+					id: "4B7FB5C549E80CDF"
+					item: "minecraft:oak_log"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "6143FE8D361B12DB"
+					item: { Count: 3, id: "minecraft:oak_fence" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "193B684BB7368C54"
+					item: { Count: 2, id: "minecraft:oak_door" }
+					type: "item"
+				}
+				{
+					id: "4D1C80B25DFB83EA"
+					points: false
+					type: "xp"
+					value: 3L
+				}
+				{
+					dimension: "minecraft:overworld"
+					id: "041F67B979835531"
+					ignore_dimension: false
+					position: [I;
+						0
+						0
+						0
+					]
+					size: [I;
+						1
+						1
+						1
+					]
+					type: "location"
+				}
+				{
+					advancement: "minecraft:story/root"
+					criterion: ""
+					id: "14213143673FEC2F"
+					type: "advancement"
+				}
+				{
+					biome: "minecraft:plains"
+					id: "2496CDEC88A6CD3E"
+					type: "biome"
+				}
+			]
+			x: -2.5d
+			y: 1.5d
 		}
 	]
 	title: "research"
