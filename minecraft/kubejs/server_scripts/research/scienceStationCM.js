@@ -27,19 +27,33 @@ ServerEvents.recipes(event => {
             })
 
             let matches = [] // placeholder for matched items
+            let matchedItems = [] // placeholder to avoid duplicates of packs
             reqScience.forEach(science => {
                 for (let i = 0; i < inputs.length; i++) {
-                    if (inputs[i].id == science[0]) {
+                    if (inputs[i].id == science[0] && !matchedItems.includes(science[0])) {
+                        matchedItems.push(science[0])
                         matches.push(science)
                     }
                 }
             })
 
-            console.log(matches)
+            if (matches.length > 0) {
+                matches.forEach(match => {
+                    ctx.machine.removeItemFromSlot('input' + (inputs.indexOf(match[0]) + 1), 1, false)
+                })
+                ctx.machine.data.matches = matches
 
-            return ctx.success()
+                return ctx.success()
+            } else {
+                return ctx.error("Missing Science")
+            }
+
         })
         .requireFunctionOnEnd(ctx => {
+            let matches = ctx.machine.data.matches
+            matches.forEach(match => {
+                addQuestProgress(ctx.machine.owner, getQuestObject(ctx.machine.owner.level, match[1]), 1)
+            })
             return ctx.success()
         })
 })
