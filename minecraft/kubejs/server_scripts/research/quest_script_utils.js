@@ -1,3 +1,5 @@
+//priority: 999
+
 //For accessing quest stuff outside of the custom task event
 
 let getQuestData = (player) => FTBQuests.getData(player)

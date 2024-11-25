@@ -1,7 +1,10 @@
 ServerEvents.recipes(event => {
     event.recipes.custommachinery.custom_machine("custommachinery:science_station", 60)
         .requireFunctionOnStart(ctx => {
-            if (isQuestComplete(ctx.machine.owner, getQuestObject(ctx.machine.owner.level, selectedQuest))) {
+            while (ctx.machine.owner == null) {
+                return ctx.error("Owner not found")
+            }
+            if (isQuestComplete(ctx.machine.owner, getQuestObject(ctx.tile.level, selectedQuest))) {
                 return ctx.error("Quest Completed")
             }
 
@@ -21,7 +24,7 @@ ServerEvents.recipes(event => {
 
             let reqScience = []
             currentQuest.tasks.forEach(task => {
-                if (!isQuestComplete(ctx.machine.owner, getQuestObject(ctx.machine.owner.level, task.taskId))) {
+                if (!isQuestComplete(ctx.machine.owner, getQuestObject(ctx.tile.level, task.taskId))) {
                     reqScience.push([task.science, task.taskId])
                 }
             })
@@ -50,9 +53,12 @@ ServerEvents.recipes(event => {
 
         })
         .requireFunctionOnEnd(ctx => {
+            while (ctx.machine.owner == null) {
+                return ctx.error("Owner not found")
+            }
             let matches = ctx.machine.data.matches
             matches.forEach(match => {
-                addQuestProgress(ctx.machine.owner, getQuestObject(ctx.machine.owner.level, match[1]), 1)
+                addQuestProgress(ctx.machine.owner, getQuestObject(ctx.tile.level, match[1]), 1)
             })
             return ctx.success()
         })
