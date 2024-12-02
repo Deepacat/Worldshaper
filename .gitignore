@@ -6,22 +6,13 @@ modlist.html
 !minecraft/config*
 !minecraft/defaultconfigs*
 !minecraft/kubejs*
-!minecraft/resourcepacks*
-!minecraft/shaderpacks*
-!minecraft/options.txt
 !minecraft/config/emi.json
 !minecraft/config/icon.png
 !minecraft/mods/worldshaper*
 
-# minecraft/kubejs/data/minecraft/tags*
-# minecraft/kubejs/data/minecraft/worldgen*
 minecraft/config/alexsmobs*
-minecraft/resourcepacks
-minecraft/resourcepacks*
-minecraft/resourcepacks/Quark*
 minecraft/config/everycomp-hazardous.properties
-/minecraft/config/konkrete/locals
-minecraft/config/lmft.json
-minecraft/options.txt
+minecraft/config/konkrete/locals
 minecraft/config/jei*
 minecraft/config/emi.css
+minecraft/config/ae2/client.json
