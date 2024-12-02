@@ -2,7 +2,7 @@ ServerEvents.recipes(event => {
     event.recipes.custommachinery.custom_machine("custommachinery:science_station", 60)
         .requireFunctionOnStart(ctx => {
             while (ctx.machine.owner == null) {
-                return ctx.error("Owner not found")
+                return ctx.error("Owner or science not found")
             }
             if (isQuestComplete(ctx.machine.owner, getQuestObject(ctx.tile.level, selectedQuest))) {
                 return ctx.error("Quest Completed")
@@ -54,8 +54,9 @@ ServerEvents.recipes(event => {
         })
         .requireFunctionOnEnd(ctx => {
             while (ctx.machine.owner == null) {
-                return ctx.error("Owner not found")
+                return ctx.error("Owner or science not found")
             }
+
             let matches = ctx.machine.data.matches
             matches.forEach(match => {
                 addQuestProgress(ctx.machine.owner, getQuestObject(ctx.tile.level, match[1]), 1)

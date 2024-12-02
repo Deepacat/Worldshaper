@@ -3,12 +3,21 @@
     "text": "Science Station"
   },
   "appearance": {
-    "block": "minecraft:furnace",
     "running": {
-        "block": "minecraft:furnace[lit=true]",
-        "light": 15
+      "custommachinery:block": "ad_astra:encased_etrium_block",
+      "custommachinery:light": 15
+    },
+    "errored": {
+      "custommachinery:block": "ad_astra:encased_calorite_block"
+    },
+    "paused": {
+      "custommachinery:block": "minecraft:furnace"
+    },
+    "custommachinery:block": "ad_astra:encased_desh_block",
+    "idle": {
+      "custommachinery:block": "ad_astra:encased_iron_block"
     }
-},
+  },
   "components": [
     {
       "type": "custommachinery:item",
@@ -43,9 +52,10 @@
   ],
   "gui": [
     {
-      "type": "custommachinery:progress",
-      "x": 151,
-      "y": 58
+      "type": "custommachinery:background",
+      "texture": "custommachinery:textures/gui/science_station.png",
+      "width": 256,
+      "height": 256
     },
     {
       "type": "custommachinery:player_inventory",
@@ -53,10 +63,72 @@
       "y": 95
     },
     {
+      "type": "custommachinery:progress",
+      "x": 148,
+      "y": 51
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input1",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 83,
+      "y": 40,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {
+          "red": 0.0,
+          "green": 0.0,
+          "blue": 0.0
+        }
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input2",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 101,
+      "y": 40,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
       "type": "custommachinery:slot",
       "id": "input3",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 119,
+      "y": 40,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input4",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 83,
+      "y": 58,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input5",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
       "x": 101,
-      "y": 46,
+      "y": 58,
       "ghost": {
         "items": [
           "minecraft:air"
@@ -67,67 +139,15 @@
     {
       "type": "custommachinery:slot",
       "id": "input6",
-      "x": 101,
-      "y": 64,
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 119,
+      "y": 58,
       "ghost": {
         "items": [
-          "minecraft:yellow_stained_glass_pane"
+          "minecraft:air"
         ],
         "color": {}
       }
-    },
-    {
-      "type": "custommachinery:slot",
-      "id": "input5",
-      "x": 83,
-      "y": 64,
-      "ghost": {
-        "items": [
-          "minecraft:purple_stained_glass_pane"
-        ],
-        "color": {}
-      }
-    },
-    {
-      "type": "custommachinery:slot",
-      "id": "input4",
-      "x": 65,
-      "y": 64,
-      "ghost": {
-        "items": [
-          "minecraft:blue_stained_glass_pane"
-        ],
-        "color": {}
-      }
-    },
-    {
-      "type": "custommachinery:slot",
-      "id": "input1",
-      "x": 65,
-      "y": 46,
-      "ghost": {
-        "items": [
-          "minecraft:red_stained_glass_pane"
-        ],
-        "color": {}
-      }
-    },
-    {
-      "type": "custommachinery:slot",
-      "id": "input2",
-      "x": 83,
-      "y": 46,
-      "ghost": {
-        "items": [
-          "minecraft:green_stained_glass_pane"
-        ],
-        "color": {}
-      }
-    },
-    {
-      "type": "custommachinery:background",
-      "width": 256,
-      "height": 192
     }
   ]
 }
