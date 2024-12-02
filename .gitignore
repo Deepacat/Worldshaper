@@ -16,3 +16,6 @@ minecraft/config/konkrete/locals
 minecraft/config/jei*
 minecraft/config/emi.css
 minecraft/config/ae2/client.json
+minecraft/kubejs/server_scripts/example.js
+minecraft/config/spark/activity.json
+minecraft/kubejs/client_scripts/example.js
