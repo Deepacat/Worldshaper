@@ -3,12 +3,12 @@ instance.cfg
 mmc-pack.json
 modlist.html
 
-!minecraft/config*
-!minecraft/defaultconfigs*
-!minecraft/kubejs*
-!minecraft/config/emi.json
-!minecraft/config/icon.png
-!minecraft/mods/worldshaper*
+!/minecraft/config*
+!/minecraft/defaultconfigs*
+!/minecraft/kubejs*
+!/minecraft/config/emi.json
+!/minecraft/config/icon.png
+!/minecraft/mods/worldshaper*
 
 minecraft/config/alexsmobs*
 minecraft/config/everycomp-hazardous.properties
