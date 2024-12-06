@@ -1,0 +1,79 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "start"
+	group: "72BC2643F40BB7F9"
+	icon: "ad_astra:earth_globe"
+	id: "14480558A1A3D305"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "11D0099DDAB90027"
+			tasks: [{
+				id: "19F88F4D31610598"
+				type: "checkmark"
+			}]
+			title: "good morning"
+			x: -9.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["11D0099DDAB90027"]
+			id: "479A0BE77B28726B"
+			rewards: [
+				{
+					id: "642C5FBC92794AF7"
+					item: {
+						Count: 1
+						id: "gtceu:prospector.luv"
+						tag: {
+							Charge: 999995060L
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "17360DC389F348B7"
+					item: {
+						Count: 1
+						id: "gtceu:lv_steel_drill"
+						tag: {
+							Charge: 2147483647L
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								AoEColumn: 1
+								AoELayer: 0
+								AoERow: 1
+								MaxAoEColumn: 1
+								MaxAoELayer: 0
+								MaxAoERow: 1
+								TorchPlacing: 1b
+							}
+							GT.Tool: {
+								AttackDamage: 1.0f
+								AttackSpeed: -3.2f
+								Damage: 0
+								HarvestLevel: 3
+								MaxDamage: 0
+								ToolSpeed: 6.0f
+							}
+							HideFlags: 2
+							MaxCharge: 2147483647L
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "07FE31A3FFA6A5B3"
+				type: "checkmark"
+			}]
+			title: "freebies"
+			x: -7.5d
+			y: -7.0d
+		}
+	]
+	title: "Tier 0"
+}

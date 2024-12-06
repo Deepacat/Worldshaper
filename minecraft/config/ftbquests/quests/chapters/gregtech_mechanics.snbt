@@ -1,0 +1,31 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "gregtech_mechanics"
+	group: "24068104ACB87438"
+	icon: {
+		Count: 1
+		id: "gtceu:neutronium_wrench"
+		tag: {
+			DisallowContainerItem: 0b
+			GT.Behaviours: {
+				Mode: 2b
+				RelocateMinedBlocks: 1b
+				RelocateMobDrops: 1b
+			}
+			GT.Tool: {
+				Damage: 0
+				HarvestLevel: 6
+				MaxDamage: 65534
+				ToolSpeed: 184.0f
+			}
+			HideFlags: 2
+			Unbreakable: 1b
+		}
+	}
+	id: "27F23B8C08F635D0"
+	order_index: 1
+	quest_links: [ ]
+	quests: [ ]
+	title: "GregTech Mechanics"
+}

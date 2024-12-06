@@ -2,7 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "research"
-	group: ""
+	group: "24068104ACB87438"
+	icon: "kubejs:mv_science_pack"
 	id: "24A7AA5C6AFEB66A"
 	order_index: 0
 	quest_links: [ ]
@@ -38,99 +39,6 @@
 			x: 3.5d
 			y: 1.5d
 		}
-		{
-			dependencies: [
-				"73724D642AE2BDF0"
-				"54789565713C9597"
-			]
-			id: "49E796F89675F983"
-			tasks: [{
-				id: "67105B93D74541E5"
-				type: "custom"
-			}]
-			title: "chemical reactor"
-			x: 0.5d
-			y: 4.0d
-		}
-		{
-			dependencies: ["3DD9E38EBBDEA66A"]
-			id: "54789565713C9597"
-			tasks: [{
-				id: "78580226A452CBD5"
-				type: "custom"
-			}]
-			title: "turbine"
-			x: 3.5d
-			y: 4.0d
-		}
-		{
-			dependencies: ["49E796F89675F983"]
-			id: "321E5FDD583988FC"
-			tasks: [{
-				id: "5FD94A533F8DEE91"
-				type: "custom"
-			}]
-			title: "electric blast furnace"
-			x: -2.5d
-			y: 4.0d
-		}
-		{
-			id: "209768AB004AB79C"
-			tasks: [
-				{
-					id: "4B7FB5C549E80CDF"
-					item: "minecraft:oak_log"
-					type: "item"
-				}
-				{
-					count: 3L
-					id: "6143FE8D361B12DB"
-					item: { Count: 3, id: "minecraft:oak_fence" }
-					type: "item"
-				}
-				{
-					count: 2L
-					id: "193B684BB7368C54"
-					item: { Count: 2, id: "minecraft:oak_door" }
-					type: "item"
-				}
-				{
-					id: "4D1C80B25DFB83EA"
-					points: false
-					type: "xp"
-					value: 3L
-				}
-				{
-					dimension: "minecraft:overworld"
-					id: "041F67B979835531"
-					ignore_dimension: false
-					position: [I;
-						0
-						0
-						0
-					]
-					size: [I;
-						1
-						1
-						1
-					]
-					type: "location"
-				}
-				{
-					advancement: "minecraft:story/root"
-					criterion: ""
-					id: "14213143673FEC2F"
-					type: "advancement"
-				}
-				{
-					biome: "minecraft:plains"
-					id: "2496CDEC88A6CD3E"
-					type: "biome"
-				}
-			]
-			x: -2.5d
-			y: 1.5d
-		}
 	]
-	title: "research"
+	title: "Research Tree"
 }

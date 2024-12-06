@@ -1,16 +1,16 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "trials_harden"
-	group: "41FEA52DD45936FD"
+	filename: "tier_1"
+	group: "72BC2643F40BB7F9"
 	icon: {
 		Count: 1
 		id: "ad_astra:tier_1_rocket"
 		tag: { }
 	}
-	id: "0EFB44E1F474D7DB"
-	order_index: 0
+	id: "29DB6C89AB337DBD"
+	order_index: 1
 	quest_links: [ ]
 	quests: [ ]
-	title: " Through The Stars"
+	title: "Tier 1"
 }

@@ -1,0 +1,47 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "data_shop"
+	group: "24068104ACB87438"
+	icon: "gtceu:neutronium_credit"
+	id: "24D082B950EF9E49"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			icon: "worldshapercore:steam_quarry"
+			id: "18CC07CB355F7959"
+			rewards: [{
+				id: "7F45B1E67ACFA242"
+				item: "kubejs:quarry_kit"
+				type: "item"
+			}]
+			tasks: [{
+				icon: "gtceu:cupronickel_credit"
+				id: "6EFEB35BA316B2AC"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			icon: "gtceu:bronze_drill_head"
+			id: "78296026CB0AD92C"
+			rewards: [{
+				count: 16
+				id: "49A20A9C48DB4BEC"
+				item: "gtceu:bronze_drill_head"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3D4ED4E233D2D418"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.0d
+		}
+	]
+	title: "Data shop"
+}

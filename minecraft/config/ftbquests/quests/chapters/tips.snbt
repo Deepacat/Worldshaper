@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "tips"
+	group: "24068104ACB87438"
+	icon: "minecraft:oak_hanging_sign"
+	id: "3A4EBA95928BD6A6"
+	order_index: 2
+	quest_links: [ ]
+	quests: [ ]
+	title: "Tips"
+}

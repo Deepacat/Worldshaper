@@ -2,7 +2,9 @@
   "modPriorities": [
     "minecraft",
     "kubejs",
-    "gtceu"
+    "gtceu",
+    "create",
+    "ad_astra"
   ],
   "stoneStrata": [
     "stone",
