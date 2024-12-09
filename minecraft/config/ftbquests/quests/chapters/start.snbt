@@ -65,6 +65,53 @@
 					}
 					type: "item"
 				}
+				{
+					id: "2EAE8CC109EB0D37"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							Parent: {
+								Items: [
+									{
+										Count: 64b
+										Slot: 0
+										id: "minecraft:cooked_beef"
+									}
+									{
+										Count: 64b
+										Slot: 1
+										id: "minecraft:cooked_beef"
+									}
+									{
+										Count: 64b
+										Slot: 2
+										id: "minecraft:cooked_beef"
+									}
+									{
+										Count: 64b
+										Slot: 3
+										id: "minecraft:cooked_beef"
+									}
+									{
+										Count: 64b
+										Slot: 4
+										id: "minecraft:cooked_beef"
+									}
+									{
+										Count: 64b
+										Slot: 5
+										id: "minecraft:cooked_beef"
+									}
+								]
+								Open: 0b
+								SelectedSlot: 0b
+								Size: 6
+							}
+						}
+						id: "supplementaries:lunch_basket"
+					}
+					type: "item"
+				}
 			]
 			tasks: [{
 				id: "07FE31A3FFA6A5B3"

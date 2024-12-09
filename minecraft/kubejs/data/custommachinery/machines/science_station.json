@@ -14,6 +14,7 @@
       "custommachinery:block": "minecraft:furnace"
     },
     "custommachinery:block": "ad_astra:encased_desh_block",
+    "custommachinery:item": "ad_astra:encased_desh_block",
     "idle": {
       "custommachinery:block": "ad_astra:encased_iron_block"
     }
@@ -61,11 +62,6 @@
       "type": "custommachinery:player_inventory",
       "x": 47,
       "y": 95
-    },
-    {
-      "type": "custommachinery:progress",
-      "x": 148,
-      "y": 51
     },
     {
       "type": "custommachinery:slot",
@@ -148,6 +144,17 @@
         ],
         "color": {}
       }
+    },
+    {
+      "type": "custommachinery:progress",
+      "direction": "BOTTOM",
+      "end": 0.70,
+      "x": 150,
+      "y": 36,
+      "width": 40,
+      "height": 40,
+      "texture_empty": "kubejs:textures/gui/science_station_progress_empty.png",
+      "texture_filled": "kubejs:textures/gui/science_station_progress_filled.png"
     }
   ]
 }

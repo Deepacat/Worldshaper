@@ -1,6 +1,9 @@
 ServerEvents.recipes(event => {
     event.recipes.custommachinery.custom_machine("custommachinery:science_station", 60)
         .requireFunctionOnStart(ctx => {
+            if (selectedQuest == '') {
+                return ctx.error("No quest selected")
+            }
             while (ctx.machine.owner == null) {
                 return ctx.error("Owner or science not found")
             }
@@ -8,59 +11,50 @@ ServerEvents.recipes(event => {
                 return ctx.error("Quest Completed")
             }
 
+            // console.log(ctx.machine.getId() + " at " + ctx.tile.blockPos)
+
             let inputs = [] // placeholder for machine held items
             for (let i = 1; i <= 6; i++) { // Adds all items currently in machine to an array
-                inputs.push(ctx.machine.getItemStored("input" + i))
+                if (ctx.machine.getItemStored("input" + i))
+                    inputs.push(Item.of(ctx.machine.getItemStored("input" + i)))
             }
+            // console.log(inputs)
 
-            let currentQuest = {}
-            questObjs.forEach(obj => { // Finds the quest obj for the selected quest
-                if (obj.mainQuest == selectedQuest) {
-                    currentQuest = obj
-                    return
-                }
-                return ctx.error("Task not found")
-            })
-
-            let reqScience = []
-            currentQuest.tasks.forEach(task => {
-                if (!isQuestComplete(ctx.machine.owner, getQuestObject(ctx.tile.level, task.taskId))) {
-                    reqScience.push([task.science, task.taskId])
-                }
+            let questPackArr = questPacks.find(pack => pack[0] == selectedQuest)[1] // gets the array of packs for the selected quest
+            let reqSciencePacks = []
+            questPackArr.forEach(pack => {
+                reqSciencePacks.push(Item.of(`kubejs:${pack[0]}_science_pack`, pack[1]))
             })
 
             let matches = [] // placeholder for matched items
-            let matchedItems = [] // placeholder to avoid duplicates of packs
-            reqScience.forEach(science => {
-                for (let i = 0; i < inputs.length; i++) {
-                    if (inputs[i].id == science[0] && !matchedItems.includes(science[0])) {
-                        matchedItems.push(science[0])
-                        matches.push(science)
+            reqSciencePacks.forEach(sciencePack => {
+                for (let curSlot = 0; curSlot < inputs.length; curSlot++) {
+                    if (inputs[curSlot].id == sciencePack.id) {
+                        if (inputs[curSlot].count >= sciencePack.count) {
+                            matches.push([sciencePack, curSlot])
+                            return
+                        }
                     }
                 }
             })
 
-            if (matches.length > 0) {
+            // console.log(matches)
+            if (matches.length == reqSciencePacks.length) {
                 matches.forEach(match => {
-                    ctx.machine.removeItemFromSlot('input' + (inputs.indexOf(match[0]) + 1), 1, false)
+                    ctx.machine.removeItemFromSlot(`input${match[1] + 1}`, match[0].count, false)
                 })
                 ctx.machine.data.matches = matches
-
                 return ctx.success()
             } else {
                 return ctx.error("Missing Science")
             }
-
         })
         .requireFunctionOnEnd(ctx => {
             while (ctx.machine.owner == null) {
                 return ctx.error("Owner or science not found")
             }
-
-            let matches = ctx.machine.data.matches
-            matches.forEach(match => {
-                addQuestProgress(ctx.machine.owner, getQuestObject(ctx.tile.level, match[1]), 1)
-            })
+            addQuestProgress(ctx.machine.owner, getQuestObject(ctx.tile.level, selectedQuest), 1)
             return ctx.success()
         })
+
 })

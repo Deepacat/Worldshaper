@@ -1,14 +1,13 @@
-let selectedQuest = '73724D642AE2BDF0'
-let questObjs = []
+let selectedQuest = ''
+let questPacks = []
 let researchNum = 0
 
-function createResearchTask(itemIcon, questName, questObj) {
-    questObjs.push(questObj)
+function createResearchTask(itemIcon, questName, taskId, packs, amount) {
+    let quest = [taskId, packs, amount]
+    questPacks.push(quest)
 
-    questObj.tasks.forEach(task => {
-        FTBQuestsEvents.customTask(task.taskId, event => {
-            event.maxProgress = task.amount
-        })
+    FTBQuestsEvents.customTask(taskId, event => {
+        event.maxProgress = amount
     })
 
     researchMenu.addSlot({
@@ -17,35 +16,16 @@ function createResearchTask(itemIcon, questName, questObj) {
         y: 0,
         label: questName,
         item: itemIcon,
-        tooltip: "questid: " + questObj.mainQuest,
+        tooltip: "questid: " + taskId,
         onLeftClicked: (player) => {
-            player.sendSystemMessage("Selected quest: " + questName + " (" + questObj.mainQuest + ")");
-            selectedQuest = questObj.mainQuest
+            player.sendSystemMessage("Selected quest: " + questName + " (" + taskId + ")");
+            selectedQuest = taskId
         }
     })
     researchNum++
 }
-
-createResearchTask('gtceu:steam_grinder', 'Grinder',
-    {
-        mainQuest: "73724D642AE2BDF0",
-        tasks: [
-            {
-                taskId: '6161FE4CC69F1EB5',
-                science: "kubejs:lv_science_pack",
-                amount: 100
-            },
-            {
-                taskId: '3313EC2C07C250C9',
-                science: "kubejs:mv_science_pack",
-                amount: 25
-            }
-        ]
-    }
-)
-
-// createResearchTask('gtceu:bronze_large_boiler', 'Boiler', '449284A79D58CE0A', )  //boiler
-
+createResearchTask('gtceu:steam_grinder', 'Grinder', '48BF07CE939BD710', [ ["lv", 5], ["mv", 3], ["hv", 1] ], 10)
+createResearchTask('gtceu:bronze_large_boiler', 'Boiler', '5B08B76B8F04F37F', [ ["lv", 10], ["mv", 2] ], 20)
 
 // WORKING
 // function breakBlockQuest(taskID, playerData, amount, silkTouchAllowed, blockList) {

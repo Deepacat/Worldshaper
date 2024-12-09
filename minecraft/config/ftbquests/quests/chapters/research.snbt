@@ -9,20 +9,14 @@
 	quest_links: [ ]
 	quests: [
 		{
+			description: ["&75 LV &b3 MV &61 HV"]
 			icon: "gtceu:steam_grinder"
 			id: "73724D642AE2BDF0"
-			tasks: [
-				{
-					id: "6161FE4CC69F1EB5"
-					title: "Lv"
-					type: "custom"
-				}
-				{
-					id: "3313EC2C07C250C9"
-					title: "Mv"
-					type: "custom"
-				}
-			]
+			tasks: [{
+				id: "48BF07CE939BD710"
+				title: "Amount Researched"
+				type: "custom"
+			}]
 			title: "grinder"
 			x: 0.5d
 			y: 1.5d
@@ -31,8 +25,8 @@
 			icon: "gtceu:bronze_large_boiler"
 			id: "3DD9E38EBBDEA66A"
 			tasks: [{
-				id: "449284A79D58CE0A"
-				title: "lv"
+				id: "5B08B76B8F04F37F"
+				title: "Amount Researched"
 				type: "custom"
 			}]
 			title: "boiler"
