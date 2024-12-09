@@ -27,7 +27,7 @@ StartupEvents.registry('item', e => {
     makeSciencePack('magnetic_science_pack', '§9Magnetic Science Pack')
     makeSciencePack('abyssal_science_pack', '§1Abyssal Science Pack')
     makeSciencePack('toxic_science_pack', '§aToxic Science Pack')
-    makeSciencePack('darkened_science_pack', '§cDarkened Science Pack')
+    makeSciencePack('forlorn_science_pack', '§cForlorn Science Pack')
     makeSciencePack('corrupted_science_pack', '§4Co§kr§r§4rrupt§ke§r§4d Sc§ki§r§4en§kc§r§4e P§ka§r§4ck')
 
     e.create('quarry_kit').maxStackSize(16).tooltip('§7Right click to get the items for a steam quarry').displayName('§6Quarry Kit')
