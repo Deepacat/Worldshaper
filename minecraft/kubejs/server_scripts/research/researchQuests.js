@@ -24,8 +24,8 @@ function createResearchTask(itemIcon, questName, taskId, packs, amount) {
     })
     researchNum++
 }
-createResearchTask('gtceu:steam_grinder', 'Grinder', '48BF07CE939BD710', [ ["lv", 5], ["mv", 3], ["hv", 1] ], 10)
-createResearchTask('gtceu:bronze_large_boiler', 'Boiler', '5B08B76B8F04F37F', [ ["lv", 10], ["mv", 2] ], 20)
+createResearchTask('gtceu:steam_grinder', 'Grinder', '48BF07CE939BD710', [["lv", 5], ["mv", 3], ["hv", 1]], 50)
+createResearchTask('gtceu:bronze_large_boiler', 'Boiler', '5B08B76B8F04F37F', [["lv", 10], ["mv", 2]], 80)
 
 // WORKING
 // function breakBlockQuest(taskID, playerData, amount, silkTouchAllowed, blockList) {
