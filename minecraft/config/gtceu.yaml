@@ -71,7 +71,7 @@ recipes:
 
   # Whether to remove Vanilla TNT Recipe from the Crafting Table.
   # Default: true
-  removeVanillaTNTRecipe: true
+  removeVanillaTNTRecipe: false
 
   # How many Multiblock Casings to make per craft. Either 1, 2, or 3.
   # Default: 2
@@ -115,11 +115,11 @@ worldgen:
   oreVeins:
     # The grid size (in chunks) for ore vein generation
     # Default: 3
-    oreVeinGridSize: 3
+    oreVeinGridSize: 10
 
     # The maximum random offset (in blocks) from the grid for generating an ore vein.
     # Default: 12
-    oreVeinRandomOffset: 32
+    oreVeinRandomOffset: 128
 
     # Prevents regular vanilla ores from being generated outside GregTech ore veins
     # Default: true

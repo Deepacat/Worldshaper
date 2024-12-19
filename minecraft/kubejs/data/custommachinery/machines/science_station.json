@@ -23,32 +23,86 @@
     {
       "type": "custommachinery:item",
       "id": "input1",
-      "mode": "input"
+      "mode": "input",
+      "filter": "#kubejs:science_pack",
+      "whitelist": true
     },
     {
       "type": "custommachinery:item",
       "id": "input2",
-      "mode": "input"
+      "mode": "input",
+      "filter": "#kubejs:science_pack",
+      "whitelist": true
     },
     {
       "type": "custommachinery:item",
       "id": "input3",
-      "mode": "input"
+      "mode": "input",
+      "filter": "#kubejs:science_pack",
+      "whitelist": true
     },
     {
       "type": "custommachinery:item",
       "id": "input4",
-      "mode": "input"
+      "mode": "input",
+      "filter": "#kubejs:science_pack",
+      "whitelist": true
     },
     {
       "type": "custommachinery:item",
       "id": "input5",
-      "mode": "input"
+      "mode": "input",
+      "filter": "#kubejs:science_pack",
+      "whitelist": true
     },
     {
       "type": "custommachinery:item",
       "id": "input6",
-      "mode": "input"
+      "mode": "input",
+      "filter": "#kubejs:science_pack",
+      "whitelist": true
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "input7",
+      "mode": "input",
+      "filter": "#kubejs:science_pack",
+      "whitelist": true
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "input8",
+      "mode": "input",
+      "filter": "#kubejs:science_pack",
+      "whitelist": true
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "input9",
+      "mode": "input",
+      "filter": "#kubejs:science_pack",
+      "whitelist": true
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "input10",
+      "mode": "input",
+      "filter": "#kubejs:science_pack",
+      "whitelist": true
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "input11",
+      "mode": "input",
+      "filter": "#kubejs:science_pack",
+      "whitelist": true
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "input12",
+      "mode": "input",
+      "filter": "#kubejs:science_pack",
+      "whitelist": true
     }
   ],
   "gui": [
@@ -57,93 +111,6 @@
       "texture": "kubejs:textures/gui/science_station_background.png",
       "width": 256,
       "height": 256
-    },
-    {
-      "type": "custommachinery:player_inventory",
-      "x": 47,
-      "y": 128
-    },
-    {
-      "type": "custommachinery:slot",
-      "id": "input1",
-      "texture": "kubejs:textures/gui/science_station_slot.png",
-      "x": 83,
-      "y": 73,
-      "ghost": {
-        "items": [
-          "minecraft:air"
-        ],
-        "color": {
-          "red": 0.0,
-          "green": 0.0,
-          "blue": 0.0
-        }
-      }
-    },
-    {
-      "type": "custommachinery:slot",
-      "id": "input2",
-      "texture": "kubejs:textures/gui/science_station_slot.png",
-      "x": 101,
-      "y": 73,
-      "ghost": {
-        "items": [
-          "minecraft:air"
-        ],
-        "color": {}
-      }
-    },
-    {
-      "type": "custommachinery:slot",
-      "id": "input3",
-      "texture": "kubejs:textures/gui/science_station_slot.png",
-      "x": 119,
-      "y": 73,
-      "ghost": {
-        "items": [
-          "minecraft:air"
-        ],
-        "color": {}
-      }
-    },
-    {
-      "type": "custommachinery:slot",
-      "id": "input4",
-      "texture": "kubejs:textures/gui/science_station_slot.png",
-      "x": 83,
-      "y": 91,
-      "ghost": {
-        "items": [
-          "minecraft:air"
-        ],
-        "color": {}
-      }
-    },
-    {
-      "type": "custommachinery:slot",
-      "id": "input5",
-      "texture": "kubejs:textures/gui/science_station_slot.png",
-      "x": 101,
-      "y": 91,
-      "ghost": {
-        "items": [
-          "minecraft:air"
-        ],
-        "color": {}
-      }
-    },
-    {
-      "type": "custommachinery:slot",
-      "id": "input6",
-      "texture": "kubejs:textures/gui/science_station_slot.png",
-      "x": 119,
-      "y": 91,
-      "ghost": {
-        "items": [
-          "minecraft:air"
-        ],
-        "color": {}
-      }
     },
     {
       "type": "custommachinery:progress",
@@ -155,6 +122,173 @@
       "height": 40,
       "texture_empty": "kubejs:textures/gui/science_station_progress_empty.png",
       "texture_filled": "kubejs:textures/gui/science_station_progress_filled.png"
+    },
+    {
+      "type": "custommachinery:player_inventory",
+      "x": 47,
+      "y": 128
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input12",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 119,
+      "y": 93,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input8",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 119,
+      "y": 75,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input4",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 119,
+      "y": 57,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input3",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 101,
+      "y": 57,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input7",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 101,
+      "y": 75,
+      "width": 18,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input11",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 101,
+      "y": 93,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input10",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 83,
+      "y": 93,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input9",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 65,
+      "y": 93,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input6",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 83,
+      "y": 75,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input5",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 65,
+      "y": 75,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input2",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 83,
+      "y": 57,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input1",
+      "texture": "kubejs:textures/gui/science_station_slot.png",
+      "x": 65,
+      "y": 57,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {
+          "red": 0.0,
+          "green": 0.0,
+          "blue": 0.0
+        }
+      }
     }
   ]
 }
+

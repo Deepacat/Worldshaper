@@ -1,4 +1,5 @@
 ServerEvents.recipes(e => {
+    // Copy non fluid recipes from mixer to ulv mixer
     e.forEachRecipe({ type: "gtceu:mixer" }, recipe => {
         let r = JSON.parse(recipe.json)
         if (r.inputs.fluid) { return }
@@ -22,7 +23,6 @@ ServerEvents.recipes(e => {
         })
 
         let toOutput = Item.of(Ingredient.of(outputs[0].content.ingredient), outputs[0].content.count)
-
 
         e.recipes.gtceu.steam_mixer_recipes(`kubejs:gtceu/steam_mixer/${recipe.getId().split(':')[1]}`)
             .itemInputs(toInput)

@@ -10,6 +10,8 @@ StartupEvents.registry('item', e => {
             .tag('kubejs:science_pack')
     }
 
+    makeSciencePack('ulv_science_pack', '§8ULV Science Pack')
+
     // loops through voltage array and makes science packs and upgrade kits for the existing tiers
     for (let i = 0; i < global.maxVoltage; i++) {
         // upgrade kits
@@ -21,7 +23,6 @@ StartupEvents.registry('item', e => {
 
         makeSciencePack(volts[i][0].toLowerCase() + '_science_pack', `${volts[i][1]}${volts[i][0]} Science Pack`)
     }
-    makeSciencePack('ulv_science_pack', '§8ULV Science Pack')
     makeSciencePack('primordial_science_pack', '§2Primordial Science Pack')
     makeSciencePack('candy_science_pack', '§dCandy Science Pack')
     makeSciencePack('magnetic_science_pack', '§9Magnetic Science Pack')

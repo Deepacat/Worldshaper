@@ -1,4 +1,4 @@
-# Default config file that will be copied to instance's config/ftbqoptimizer.snbt location
+# Default config file that will be copied to world's serverconfig/ftbessentials.snbt location
 # Copy values you wish to override in here
 # Example:
 # 

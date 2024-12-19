@@ -5,5 +5,6 @@ rules:
     doMobLoot: 'true'
   minecraft:overworld:
     doMobSpawning: 'false'
+    keepInventory: 'true'
   worldshaper:semiflat:
     doMobSpawning: 'false'

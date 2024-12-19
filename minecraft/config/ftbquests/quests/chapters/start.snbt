@@ -112,6 +112,25 @@
 					}
 					type: "item"
 				}
+				{
+					id: "48D9CCA7D0105DC1"
+					item: {
+						Count: 1
+						id: "automobility:automobile"
+						tag: {
+							Automobile: {
+								engine: "automobility:creative"
+								frame: "automobility:echo_rickshaw"
+								isPrefab: 1b
+								wheels: "automobility:street"
+							}
+							display: {
+								Name: "{\"text\":\"Car\",\"italic\":\"false\"}"
+							}
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [{
 				id: "07FE31A3FFA6A5B3"

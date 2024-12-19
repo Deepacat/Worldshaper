@@ -4,6 +4,7 @@ ServerEvents.recipes(e => {
     e.remove({
         mod: "gtceu",
         not: [
+            { type: "gtceu:coal_burner" },
             { output: /#forge:tools.*/ },
             { type: "gtceu:bender" },
             { type: "gtceu:extruder" },

@@ -1,4 +1,6 @@
+// Recipe types
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
+    // Steam (Do not use fluid slots)
     event.create('steam_mixer_recipes')
         .category('steam')
         .setEUIO('in')
@@ -22,10 +24,19 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .setSlotOverlay(false, false, GuiTextures.CENTRIFUGE_OVERLAY)
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.CENTRIFUGE)
+
+    event.create('burner_generator_recipes')
+        .category('ulv')
+        .setEUIO('out')
+        .setMaxIOSize(1, 0, 0, 0)
+        .setSlotOverlay(false, false, GuiTextures.CENTRIFUGE_OVERLAY)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_BOILER_HEAT, FillDirection.DOWN_TO_UP)
+        .setSound(GTSoundEntries.COMBUSTION)
 })
 
+
 GTCEuStartupEvents.registry('gtceu:machine', event => {
-    // Steam Machines (APPARENTLY ITS PHYSICALLY IMPOSSIBLE TO ADD A FLUID OUTPUT)
+    // Steam Machines
     event.create('steam_mixer', 'steam', true)
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType("steam_mixer_recipes", true, true)
@@ -35,12 +46,11 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType("steam_centrifuge_recipes", true, true)
         .workableTieredHullRenderer('gtceu:block/machines/thermal_centrifuge')
-        
+
     event.create('steam_centrifuge', 'steam', true)
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType("steam_thermal_centrifuge_recipes", true, true)
         .workableTieredHullRenderer('gtceu:block/machines/centrifuge')
-
 
     // ULV Machines
     event.create('autoclave', 'simple', 0, GTValues.ULV)

@@ -1,24 +1,21 @@
 ServerEvents.recipes(event => {
     event.recipes.custommachinery.custom_machine("custommachinery:science_station", 60)
         .requireFunctionOnStart(ctx => {
-            if (selectedQuest == '') {
-                return ctx.error("No quest selected")
-            }
             while (ctx.machine.owner == null) {
                 return ctx.error("Owner or science not found")
+            }
+            if (selectedQuest == '') {
+                return ctx.error("No quest selected")
             }
             if (isQuestComplete(ctx.machine.owner, getQuestObject(ctx.tile.level, selectedQuest))) {
                 return ctx.error("Quest Completed")
             }
-
-            // console.log(ctx.machine.getId() + " at " + ctx.tile.blockPos)
 
             let inputs = [] // placeholder for machine held items
             for (let i = 1; i <= 6; i++) { // Adds all items currently in machine to an array
                 if (ctx.machine.getItemStored("input" + i))
                     inputs.push(Item.of(ctx.machine.getItemStored("input" + i)))
             }
-            // console.log(inputs)
 
             let questPackArr = questPacks.find(pack => pack[0] == selectedQuest)[1] // gets the array of packs for the selected quest
             let reqSciencePacks = []
@@ -38,7 +35,6 @@ ServerEvents.recipes(event => {
                 }
             })
 
-            // console.log(matches)
             if (matches.length == reqSciencePacks.length) {
                 matches.forEach(match => {
                     ctx.machine.removeItemFromSlot(`input${match[1] + 1}`, match[0].count, false)
