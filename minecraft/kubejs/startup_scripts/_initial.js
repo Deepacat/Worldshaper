@@ -39,8 +39,8 @@ global.compList = [
 
 global.voltageTiers = ['ulv', 'lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv']
 // Defines the current packs max voltage for item hiding sake
-// 5 = ev, ev is the max tier of the pack (probably)
-global.maxVoltage = 5
+// 4 = ev, ev is the max tier of the pack (probably)
+global.maxVoltage = 4
 
 // list of regex's to nuke, only does gregtech items
 let regexToNuke = [
