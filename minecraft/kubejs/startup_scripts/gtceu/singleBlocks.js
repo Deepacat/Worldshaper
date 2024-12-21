@@ -24,15 +24,6 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .setSlotOverlay(false, false, GuiTextures.CENTRIFUGE_OVERLAY)
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.CENTRIFUGE)
-
-        // ulv
-    event.create('burner_generator_recipes')
-        .category('ulv')
-        .setEUIO('out')
-        .setMaxIOSize(1, 0, 0, 0)
-        .setSlotOverlay(false, false, GuiTextures.CENTRIFUGE_OVERLAY)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_BOILER_HEAT, FillDirection.DOWN_TO_UP)
-        .setSound(GTSoundEntries.COMBUSTION)
 })
 
 
@@ -65,7 +56,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " autoclave")
+                .langValue("Shoddy Autoclave")
                 .recipeType(GTRecipeTypes.AUTOCLAVE_RECIPES)
                 // .workableTieredHullRenderer('gtceu:block/machines/autoclave')
         ))
@@ -74,7 +65,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " assembler")
+                .langValue("Shoddy Assembler")
                 .recipeType(GTRecipeTypes.ASSEMBLER_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/assembler')
         ))
@@ -83,7 +74,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " circuit assembler")
+                .langValue("Shoddy Circuit Assembler")
                 .recipeType(GTRecipeTypes.CIRCUIT_ASSEMBLER_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/circuit_assembler')
         ))
@@ -92,7 +83,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " fermenter")
+                .langValue("Shoddy Fermenter")
                 .recipeType(GTRecipeTypes.FERMENTING_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/fermenter')
         ))
@@ -101,7 +92,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " brewery")
+                .langValue("Shoddy Brewery")
                 .recipeType(GTRecipeTypes.BREWING_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/brewery')
         ))
@@ -110,7 +101,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " distillery")
+                .langValue("Shoddy Distillery")
                 .recipeType(GTRecipeTypes.DISTILLERY_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/distillery')
         ))
@@ -119,7 +110,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " forming press")
+                .langValue("Shoddy Forming Press")
                 .recipeType(GTRecipeTypes.FORMING_PRESS_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/forming_press')
         ))
@@ -128,7 +119,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " scanner")
+                .langValue("Shoddy Scanner")
                 .recipeType(GTRecipeTypes.SCANNER_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/scanner')
         ))
@@ -137,7 +128,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " canner")
+                .langValue("Shoddy Canner")
                 .recipeType(GTRecipeTypes.CANNER_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/canner')
         ))
@@ -146,7 +137,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " chemical reactor")
+                .langValue("Shoddy Chemical Reactor")
                 .recipeType(GTRecipeTypes.CHEMICAL_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/chemical_reactor')
         ))
@@ -155,7 +146,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " wiremill")
+                .langValue("Shoddy Wiremill")
                 .recipeType(GTRecipeTypes.WIREMILL_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/wiremill')
         ))
@@ -164,7 +155,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " electrolyzer")
+                .langValue("Shoddy Electrolyzer")
                 .recipeType(GTRecipeTypes.ELECTROLYZER_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/electrolyzer')
         ))
@@ -173,7 +164,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " chemical bath")
+                .langValue("Shoddy Chemical Bath")
                 .recipeType(GTRecipeTypes.CHEMICAL_BATH_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/chemical_bath')
         ))
@@ -182,7 +173,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " bender")
+                .langValue("Shoddy Bender")
                 .recipeType(GTRecipeTypes.BENDER_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/bender')
         ))
@@ -191,7 +182,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " lathe")
+                .langValue("Shoddy Lathe")
                 .recipeType(GTRecipeTypes.LATHE_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/lathe')
         ))
@@ -200,8 +191,9 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
             builder
-                .langValue(GTValues.VLVH[tier] + " extruder")
+                .langValue("Shoddy Extruder")
                 .recipeType(GTRecipeTypes.EXTRUDER_RECIPES)
                 .workableTieredHullRenderer('gtceu:block/machines/extruder')
         ))
 })
+
