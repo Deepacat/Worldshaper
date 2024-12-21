@@ -31,4 +31,10 @@ ServerEvents.recipes(e => {
             .duration(r.duration)
             .EUt(EUt)
     })
+    
+    // ULV Machine Recipes
+    e.recipes.gtceu.coal_burner_recipe_type('kubejs:gtceu/test/coal_tag_burning')
+        .itemInputs('#minecraft:coals')
+        .EUt(-8)
+        .duration(200)
 })

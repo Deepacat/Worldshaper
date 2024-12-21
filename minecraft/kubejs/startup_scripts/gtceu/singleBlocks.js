@@ -24,6 +24,14 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .setSlotOverlay(false, false, GuiTextures.CENTRIFUGE_OVERLAY)
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.CENTRIFUGE)
+
+    // ULV/shoddy
+    event.create('coal_burner_recipe_type')
+        .setEUIO('out')
+        .setMaxIOSize(1, 0, 0, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.ARC)
+        .setMaxTooltips(6)
 })
 
 
@@ -52,6 +60,16 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         ))
 
     // ULV Machines
+    event.create('coal_burner', 'generator')
+        .tiers(GTValues.ULV)
+        .definition((tier, builder) => (
+            builder
+                .langValue("Shoddy Coal Burning Generator")
+                .recipeType('coal_burner_recipe_type')
+                .recipeModifier(MachineModifiers.SIMPLE_GENERATOR)
+                .simpleGeneratorMachineRenderer('gtceu:block/generators/combustion')
+        ))
+        
     event.create('autoclave', 'simple')
         .tiers(GTValues.ULV)
         .definition((tier, builder) => (
