@@ -1,21 +1,13 @@
 //priority: 999
 ServerEvents.recipes(e => {
-    // The beginning of suffering. (Nukes most gt recipes except ones my ass is not making a builder for)
+    // The beginning of suffering. (Nukes most gt recipes)
     e.remove({
         mod: "gtceu",
         not: [
             { type: "gtceu:coal_burner" },
-            { output: /#forge:tools.*/ },
-            { type: "gtceu:bender" },
-            { type: "gtceu:extruder" },
-            { type: "gtceu:forge_hammer" },
             { type: "gtceu:packer" },
-            { type: "gtceu:alloy_smelter" },
             { id: /gtceu:compressor\/compress.*/ },
-            { id: /gtceu:compressor\/.*plant.*/ },
             { id: /gtceu:extractor\/extract.*/ },
-            { type: "gtceu:wiremill" },
-            { type: "gtceu:lathe" },
         ]
     })
 
@@ -28,9 +20,9 @@ ServerEvents.recipes(e => {
         { type: "pneumaticcraft:heat_frame_cooling" }, { type: "pneumaticcraft:fluid_mixer" }, { type: "ad_astra:compressing" },
         { type: "ad_astra:alloying" }, { type: "ad_astra:refining" }, { type: "alexsmobs:capsid" },
         { type: "alexscaves:nuclear_furnace" }, { type: "alexscaves:spelunkery_table" }, { type: "createaddition:rolling" },
-        { type: "create:pressing" }, { output: "create:experience_nugget", type: "create:crushing" },
-        { type: "gtceu:extruder", output: /.*rod/, not: { output: /.*long.*/ } }
-    ]
+        { type: "create:pressing" }, { output: "create:experience_nugget", type: "create:crushing" 
+    }]
+
     removeTypes.forEach(recipeType => {
         e.remove(recipeType)
     })

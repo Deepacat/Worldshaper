@@ -2,7 +2,6 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     // Steam (Do not use fluid slots)
     event.create('steam_mixer_recipes')
-        .category('steam')
         .setEUIO('in')
         .setMaxIOSize(6, 1, 0, 0)
         .setSlotOverlay(false, false, GuiTextures.COMPRESSOR_OVERLAY)
@@ -10,7 +9,6 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .setSound(GTSoundEntries.MIXER)
 
     event.create('steam_thermal_centrifuge_recipes')
-        .category('steam')
         .setEUIO('in')
         .setMaxIOSize(1, 3, 0, 0)
         .setSlotOverlay(false, false, GuiTextures.CENTRIFUGE_OVERLAY)
@@ -18,7 +16,6 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .setSound(GTSoundEntries.CENTRIFUGE)
 
     event.create('steam_centrifuge_recipes')
-        .category('steam')
         .setEUIO('in')
         .setMaxIOSize(1, 3, 0, 0)
         .setSlotOverlay(false, false, GuiTextures.CENTRIFUGE_OVERLAY)
@@ -76,7 +73,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             builder
                 .langValue("Shoddy Autoclave")
                 .recipeType(GTRecipeTypes.AUTOCLAVE_RECIPES)
-                // .workableTieredHullRenderer('gtceu:block/machines/autoclave')
+                .workableTieredHullRenderer('gtceu:block/machines/autoclave')
         ))
 
     event.create('assembler', 'simple')

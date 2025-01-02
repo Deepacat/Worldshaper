@@ -1,0 +1,11 @@
+
+#Make sure config changes are duplicated on both Clients and the Server when running a dedicated Server,
+# as the config isnt synced between Clients and Server.
+#General Settings
+[pack]
+
+	#General Settings
+	[pack.gregtech]
+		#If customportalapi portals register, for worldshaper pack
+		remove_gt_materials = false
+

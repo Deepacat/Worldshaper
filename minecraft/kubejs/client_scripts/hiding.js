@@ -1,7 +1,8 @@
 JEIEvents.hideItems(event => {
-    event.hide(/gtceu:.*ore/)
-    event.hide(/gtceu:.*indicator/)
-    event.hide(/gtceu:.*raw.*block/)
+    event.hide(/^emi:.*repairing.*/)
+    event.hide(/^gtceu:.*ore/)
+    event.hide(/^gtceu:.*indicator/)
+    event.hide(/^gtceu:.*raw.*block/)
 
     let tags = [
         Ingredient.of("#forge:tools").itemIds,
@@ -28,6 +29,7 @@ JEIEvents.hideItems(event => {
         gtItemsList = gtItemsList.filter((i) => !Ingredient.of(/.*:iron.*/).itemIds.toArray().includes(i))
         event.hide(gtItemsList)
     })
+    
 })
 
 // DEV STUFF BELOW HERE
