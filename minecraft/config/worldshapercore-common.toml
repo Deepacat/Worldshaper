@@ -1,11 +1,18 @@
 
 #Make sure config changes are duplicated on both Clients and the Server when running a dedicated Server,
 # as the config isnt synced between Clients and Server.
-#General Settings
+#General Pack Configs
 [pack]
+	#If customportalapi portals register, for worldshaper pack
+	"Custom Portal API Worldshaper Portals" = true
 
-	#General Settings
+	#GT Related Configs
 	[pack.gregtech]
-		#If customportalapi portals register, for worldshaper pack
-		remove_gt_materials = false
+		#If testing quarry multi should be registered
+		"Testing Quarry Multiblock" = true
+		#If gt worldgen layers should be generated for ad astra stones, for kjs to use ore tagprefix's
+		"Generate Ad Astra GT layers" = true
+		"register worldshaper unique macerators" = true
+		"register worldshaper parallel multis" = true
+		"register worldshaper ulv miner" = true
 

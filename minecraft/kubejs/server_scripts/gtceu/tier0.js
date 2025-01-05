@@ -37,4 +37,6 @@ ServerEvents.recipes(e => {
 
     hammerIngotToPlate('minecraft:iron_ingot', 'gtceu:iron_plate')
     hammerIngotToPlate('minecraft:gold_ingot', 'gtceu:gold_plate')
+    hammerIngotToPlate('minecraft:copper_ingot', 'gtceu:copper_plate')
+
 })

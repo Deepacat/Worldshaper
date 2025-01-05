@@ -1,12 +1,4 @@
 GTCEuServerEvents.oreVeins(event => {
-    // event.modifyAll((veinId, vein) => {
-    //     // vein.dimensions("")
-    //     vein.surfaceIndicatorGenerator(indicator => indicator
-    //         .block(Block.getBlock("minecraft:air"))
-    //         .placement("above")
-    //         .density(0.4)
-    //         .radius(5))
-    // })
     event.removeAll()
 
     event.add('kubejs:overworld/iron', vein => {

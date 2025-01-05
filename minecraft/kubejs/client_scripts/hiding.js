@@ -1,34 +1,34 @@
 JEIEvents.hideItems(event => {
-    event.hide(/^emi:.*repairing.*/)
-    event.hide(/^gtceu:.*ore/)
-    event.hide(/^gtceu:.*indicator/)
-    event.hide(/^gtceu:.*raw.*block/)
+    // event.hide(/^emi:.*repairing.*/)
+    // event.hide(/^gtceu:.*ore/)
+    // event.hide(/^gtceu:.*indicator/)
+    // event.hide(/^gtceu:.*raw.*block/)
 
-    let tags = [
-        Ingredient.of("#forge:tools").itemIds,
-        Ingredient.of("#forge:tools/scythes").itemIds,
-        Ingredient.of("#forge:tools/saws").itemIds,
-        Ingredient.of("#forge:tools/hammers").itemIds,
-        Ingredient.of("#forge:tools/mining_hammers").itemIds,
-        Ingredient.of("#forge:tools/mortars").itemIds,
-        Ingredient.of("#forge:tools/drills").itemIds,
-        Ingredient.of("#forge:tools/wire_cutters").itemIds,
-        Ingredient.of("#forge:tools/files").itemIds,
-        Ingredient.of("#forge:tools/screwdrivers").itemIds,
-        Ingredient.of("#forge:tools/wrenches").itemIds,
-        Ingredient.of("#forge:tools/knives").itemIds,
-        Ingredient.of("#forge:tools/butchery_knives").itemIds,
-        Ingredient.of("#forge:tools/crowbars").itemIds,
-        Ingredient.of("#forge:tools/spades").itemIds,
-        Ingredient.of("#forge:tools/mallets").itemIds,
-        Ingredient.of("#forge:tools/chainsaws").itemIds,
-    ]
+    // let tags = [
+    //     Ingredient.of("#forge:tools").itemIds,
+    //     Ingredient.of("#forge:tools/scythes").itemIds,
+    //     Ingredient.of("#forge:tools/saws").itemIds,
+    //     Ingredient.of("#forge:tools/hammers").itemIds,
+    //     Ingredient.of("#forge:tools/mining_hammers").itemIds,
+    //     Ingredient.of("#forge:tools/mortars").itemIds,
+    //     Ingredient.of("#forge:tools/drills").itemIds,
+    //     Ingredient.of("#forge:tools/wire_cutters").itemIds,
+    //     Ingredient.of("#forge:tools/files").itemIds,
+    //     Ingredient.of("#forge:tools/screwdrivers").itemIds,
+    //     Ingredient.of("#forge:tools/wrenches").itemIds,
+    //     Ingredient.of("#forge:tools/knives").itemIds,
+    //     Ingredient.of("#forge:tools/butchery_knives").itemIds,
+    //     Ingredient.of("#forge:tools/crowbars").itemIds,
+    //     Ingredient.of("#forge:tools/spades").itemIds,
+    //     Ingredient.of("#forge:tools/mallets").itemIds,
+    //     Ingredient.of("#forge:tools/chainsaws").itemIds,
+    // ]
 
-    tags.forEach(itemList => {
-        let gtItemsList = itemList.filter((i) => Ingredient.of(/^gtceu:.*/).itemIds.toArray().includes(i))
-        gtItemsList = gtItemsList.filter((i) => !Ingredient.of(/.*:iron.*/).itemIds.toArray().includes(i))
-        event.hide(gtItemsList)
-    })
+    // tags.forEach(itemList => {
+    //     let gtItemsList = itemList.filter((i) => Ingredient.of(/^gtceu:.*/).itemIds.toArray().includes(i))
+    //     gtItemsList = gtItemsList.filter((i) => !Ingredient.of(/.*:iron.*/).itemIds.toArray().includes(i))
+    //     event.hide(gtItemsList)
+    // })
     
 })
 
