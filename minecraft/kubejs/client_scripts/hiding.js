@@ -1,40 +1,39 @@
-JEIEvents.hideItems(event => {
-    // event.hide(/^emi:.*repairing.*/)
-    // event.hide(/^gtceu:.*ore/)
-    // event.hide(/^gtceu:.*indicator/)
-    // event.hide(/^gtceu:.*raw.*block/)
-
-    // let tags = [
-    //     Ingredient.of("#forge:tools").itemIds,
-    //     Ingredient.of("#forge:tools/scythes").itemIds,
-    //     Ingredient.of("#forge:tools/saws").itemIds,
-    //     Ingredient.of("#forge:tools/hammers").itemIds,
-    //     Ingredient.of("#forge:tools/mining_hammers").itemIds,
-    //     Ingredient.of("#forge:tools/mortars").itemIds,
-    //     Ingredient.of("#forge:tools/drills").itemIds,
-    //     Ingredient.of("#forge:tools/wire_cutters").itemIds,
-    //     Ingredient.of("#forge:tools/files").itemIds,
-    //     Ingredient.of("#forge:tools/screwdrivers").itemIds,
-    //     Ingredient.of("#forge:tools/wrenches").itemIds,
-    //     Ingredient.of("#forge:tools/knives").itemIds,
-    //     Ingredient.of("#forge:tools/butchery_knives").itemIds,
-    //     Ingredient.of("#forge:tools/crowbars").itemIds,
-    //     Ingredient.of("#forge:tools/spades").itemIds,
-    //     Ingredient.of("#forge:tools/mallets").itemIds,
-    //     Ingredient.of("#forge:tools/chainsaws").itemIds,
-    // ]
-
-    // tags.forEach(itemList => {
-    //     let gtItemsList = itemList.filter((i) => Ingredient.of(/^gtceu:.*/).itemIds.toArray().includes(i))
-    //     gtItemsList = gtItemsList.filter((i) => !Ingredient.of(/.*:iron.*/).itemIds.toArray().includes(i))
-    //     event.hide(gtItemsList)
-    // })
-    
-})
-
 // DEV STUFF BELOW HERE
 
 // add tooltip to nuked items
+
+JEIEvents.hideItems(event => {
+    event.hide([
+        // misc
+        Ingredient.of(/emi:.*repairing.*/),
+        // gt ore related
+        Ingredient.of(/gtceu:.*ore/),
+        Ingredient.of(/gtceu:.*indicator/),
+        Ingredient.of(/gtceu:.*raw.*block/),
+        // gt tools
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_scythe/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*saw/),
+        Ingredient.of(/gtceu:(?!iron(_|$))(?!.*forge).*_hammer/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_mortar/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_drill/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_wir.*utter/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_file/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_screwdriver/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_wrench/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_knife/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_crowbar/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_spade/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_mallet/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_plunger/),
+        // vanilla gt tools
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_sword/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_pickaxe/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_axe/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_shovel/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_hoe/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_sword/)
+    ])
+})
 
 if (global.devMode) {
     // mark things as nuked instead of hiding in dev mode
