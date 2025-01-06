@@ -12,26 +12,27 @@ JEIEvents.hideItems(event => {
         Ingredient.of(/gtceu:.*raw.*block/),
         // gt tools
         Ingredient.of(/gtceu:(?!iron(_|$)).*_scythe/),
-        Ingredient.of(/gtceu:(?!iron(_|$)).*saw/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*saw$/),
         Ingredient.of(/gtceu:(?!iron(_|$))(?!.*forge).*_hammer/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_mortar/),
-        Ingredient.of(/gtceu:(?!iron(_|$)).*_drill/),
-        Ingredient.of(/gtceu:(?!iron(_|$)).*_wir.*utter/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_drill$/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_wirecutter$/),
+        Ingredient.of(/gtceu:(?!iron(_|$)).*_wire_cutter/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_file/),
-        Ingredient.of(/gtceu:(?!iron(_|$)).*_screwdriver/),
-        Ingredient.of(/gtceu:(?!iron(_|$)).*_wrench/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_screwdriver$/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_wrench$/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_knife/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_crowbar/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_spade/),
-        Ingredient.of(/gtceu:(?!iron(_|$)).*_mallet/),
-        Ingredient.of(/gtceu:(?!iron(_|$)).*_plunger/),
+        Ingredient.of(/gtceu:(?!rubber(_|$)).*_mallet/),
+        Ingredient.of(/gtceu:(?!rubber(_|$)).*_plunger/),
         // vanilla gt tools
-        Ingredient.of(/gtceu:(?!iron(_|$)).*_sword/),
-        Ingredient.of(/gtceu:(?!iron(_|$)).*_pickaxe/),
-        Ingredient.of(/gtceu:(?!iron(_|$)).*_axe/),
-        Ingredient.of(/gtceu:(?!iron(_|$)).*_shovel/),
-        Ingredient.of(/gtceu:(?!iron(_|$)).*_hoe/),
-        Ingredient.of(/gtceu:(?!iron(_|$)).*_sword/)
+        Ingredient.of(/gtceu:.*_sword/),
+        Ingredient.of(/gtceu:.*_pickaxe/),
+        Ingredient.of(/gtceu:.*_axe/),
+        Ingredient.of(/gtceu:.*_shovel/),
+        Ingredient.of(/gtceu:.*_hoe/),
+        Ingredient.of(/gtceu:.*_sword/)
     ])
 })
 
