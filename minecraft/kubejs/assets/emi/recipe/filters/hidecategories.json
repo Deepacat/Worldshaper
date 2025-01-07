@@ -1,15 +1,22 @@
 {
     "filters": [
         {
-            "category": "minecraft:grinding"
+            "category": "emi:grinding"
+        },
+        {
+            "id": "/create\/fill_minecraft_bucket/",
+            "category": "create:spout_filling"
         },
         {
             "id": "/bucket/",
             "category": "emi:world_interaction"
         },
         {
-            "id": "/repair/",
             "category": "emi:anvil_repairing"
+        },
+        {
+            "id": "/crafting\/repair/",
+            "category": "minecraft:crafting"
         },
         {
             "category": "ae2:entropy"
@@ -31,6 +38,9 @@
         },
         {
             "category": "gtceu:create_mixer" 
+        },
+        {
+            "category": "pneumaticcraft:spawner_extraction" 
         }
     ]
 }

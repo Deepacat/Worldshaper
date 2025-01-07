@@ -1,11 +1,11 @@
-// DEV STUFF BELOW HERE
-
-// add tooltip to nuked items
+// this file is for itemstack hiding
+// see minecraft\kubejs\assets\emi\recipe\filters\hidecategories.json
+// for category hiding/mass group hiding
 
 JEIEvents.hideItems(event => {
     event.hide([
         // misc
-        Ingredient.of(/emi:.*repairing.*/),
+
         // gt ore related
         Ingredient.of(/gtceu:.*ore/),
         Ingredient.of(/gtceu:.*indicator/),
@@ -15,7 +15,7 @@ JEIEvents.hideItems(event => {
         Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*saw$/),
         Ingredient.of(/gtceu:(?!iron(_|$))(?!.*forge).*_hammer/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_mortar/),
-        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_drill$/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?steel).*_drill$/),
         Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_wirecutter$/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_wire_cutter/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_file/),
