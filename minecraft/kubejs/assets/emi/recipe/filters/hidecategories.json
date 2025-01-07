@@ -41,6 +41,9 @@
         },
         {
             "category": "pneumaticcraft:spawner_extraction" 
+        },
+        {
+            "category": "gtceu:ore_processing_diagram"
         }
     ]
 }
