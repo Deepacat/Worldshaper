@@ -34,3 +34,26 @@ ServerEvents.recipes(e => {
     })
 
 })
+
+ServerEvents.tags('item', e => {
+    global.nukeList.forEach((item) => {
+        e.removeAllTagsFrom(item)
+    })
+
+    let material = 'aluminium'
+
+    e.add('c:hidden_from_recipe_viewers', `#forge:gears/${material}`)
+    e.add('c:hidden_from_recipe_viewers', `#forge:foils/${material}`)
+    e.add('c:hidden_from_recipe_viewers', `#forge:small_gears/${material}`)
+    e.add('c:hidden_from_recipe_viewers', `#forge:screws/${material}`)
+    e.add('c:hidden_from_recipe_viewers', `#forge:bolts/${material}`)
+    e.add('c:hidden_from_recipe_viewers', `#forge:rods/${material}`)
+    e.add('c:hidden_from_recipe_viewers', `#forge:rods/long/${material}`)
+    e.add('c:hidden_from_recipe_viewers', `#forge:rings/${material}`)
+    e.add('c:hidden_from_recipe_viewers', `#forge:springs/${material}`)
+    e.add('c:hidden_from_recipe_viewers', `#forge:small_springs/${material}`)
+    e.add('c:hidden_from_recipe_viewers', `#forge:fine_wires/${material}`)
+    e.add('c:hidden_from_recipe_viewers', `#forge:rounds/${material}`)
+    e.add('c:hidden_from_recipe_viewers', `#forge:dense_plates/${material}`)
+    e.add('c:hidden_from_recipe_viewers', `#forge:rotors/${material}`)
+})
