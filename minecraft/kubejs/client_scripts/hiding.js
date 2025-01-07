@@ -12,7 +12,11 @@ JEIEvents.hideItems(event => {
         Ingredient.of(/gtceu:.*raw.*block/),
         // gt tools
         Ingredient.of(/gtceu:(?!iron(_|$)).*_scythe/),
-        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*saw$/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_saw$/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_buzzsaw$/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_buzz_saw_blade$/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_chainsaw$/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*chainsaw_head$/),
         Ingredient.of(/gtceu:(?!iron(_|$))(?!.*forge).*_hammer/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_mortar/),
         Ingredient.of(/^gtceu:(?!([a-z]?v_)?steel).*_drill$/),
@@ -20,7 +24,9 @@ JEIEvents.hideItems(event => {
         Ingredient.of(/gtceu:(?!iron(_|$)).*_wire_cutter/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_file/),
         Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_screwdriver$/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_screwdriver_tip$/),
         Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_wrench$/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_wrench_tip$/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_knife/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_crowbar/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_spade/),
@@ -42,6 +48,11 @@ if (global.devMode) {
         global.nukeList.forEach(i => {
             event.add(i, '§c§l - - - - NUKED - - - - ')
         })
+    })
+    // comment this out unless reload testing
+    JEIEvents.hideItems(event => {
+        // hide nukelist
+        event.hide(global.nukeList)
     })
 
     // change nukelist textures (Only works on generic items)
