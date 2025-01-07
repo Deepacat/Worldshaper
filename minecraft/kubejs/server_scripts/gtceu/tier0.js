@@ -5,25 +5,6 @@ ServerEvents.recipes(e => {
         .EUt(-8)
         .duration(200)
 
-    // GT Tools
-    e.shaped(Item.of('gtceu:iron_hammer', 1, { MaxDamage: 1024 }), [
-        ' BI',
-        ' SB',
-        'S  '
-    ], {
-        'S': 'minecraft:stick',
-        'I': '#forge:ingots/iron',
-        'B': '#forge:storage_blocks/iron'
-    })
-    e.shaped(Item.of('gtceu:steel_hammer', 1, { Unbreakable: 1 }), [
-        ' BI',
-        ' SB',
-        'S  '
-    ], {
-        'S': 'minecraft:stick',
-        'I': '#forge:ingots/steel',
-        'B': '#forge:storage_blocks/steel'
-    })
     function hammerIngotToPlate(ingot, plate) {
         e.shaped(Item.of(plate), [
             'H  ',
