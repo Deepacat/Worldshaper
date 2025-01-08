@@ -24,5 +24,4 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 GTCEuStartupEvents.materialModification(() => {
     // Removing Wire properties from anything MURDERS powerlines
-    // GTMaterials.Copper.getProperties().removeProperty($PropertyKey.WIRE)
 })
