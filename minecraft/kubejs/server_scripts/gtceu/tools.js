@@ -7,7 +7,7 @@ ServerEvents.recipes(e => {
         'S  '
     ], {
         'S': 'minecraft:stick',
-        'I': '#forge:ingots/iron',
+        'I': 'minecraft:iron_ingot',
         'B': '#forge:storage_blocks/iron'
     })
     e.shaped(Item.of('gtceu:steel_hammer', 1, { Unbreakable: 1 }), [
@@ -16,7 +16,7 @@ ServerEvents.recipes(e => {
         'S  '
     ], {
         'S': 'minecraft:stick',
-        'I': '#forge:ingots/steel',
+        'I': 'gtceu:steel_ingot',
         'B': '#forge:storage_blocks/steel'
     })
     // wirecutter
@@ -25,24 +25,24 @@ ServerEvents.recipes(e => {
         'HPS',
         'RCR'
     ], {
-        'P': '#forge:plates/iron',
+        'P': 'gtceu:iron_plate',
         'F': '#forge:tools/files',
         'H': '#forge:tools/hammers',
         'S': '#forge:tools/screwdrivers',
-        'R': '#forge:rods/iron',
-        'C': '#forge:screws/iron'
+        'R': 'gtceu:iron_rod',
+        'C': 'gtceu:iron_screw'
     })
     e.shaped(Item.of('gtceu:steel_wire_cutter', 1, { Unbreakable: 1 }), [
         'PFP',
         'HPS',
         'RCR'
     ], {
-        'P': '#forge:plates/steel',
+        'P': 'gtceu:steel_plate',
         'F': '#forge:tools/files',
         'H': '#forge:tools/hammers',
         'S': '#forge:tools/screwdrivers',
-        'R': '#forge:rods/steel',
-        'C': '#forge:screws/steel'
+        'R': 'gtceu:steel_rod',
+        'C': 'gtceu:steel_screw'
     })
     // file
     e.shaped(Item.of('gtceu:iron_file', 1, { MaxDamage: 128 }), [
@@ -50,7 +50,7 @@ ServerEvents.recipes(e => {
         ' P ',
         ' S '
     ], {
-        'P': '#forge:plates/iron',
+        'P': 'gtceu:iron_plate',
         'S': 'minecraft:stick'
     })
     // saw
@@ -58,7 +58,7 @@ ServerEvents.recipes(e => {
         'PPS',
         'FHS'
     ], {
-        'P': '#forge:plates/iron',
+        'P': 'gtceu:iron_plate',
         'F': '#forge:tools/files',
         'H': '#forge:tools/hammers',
         'S': 'minecraft:stick'
@@ -69,7 +69,7 @@ ServerEvents.recipes(e => {
         ' P ',
         ' P '
     ], {
-        'P': '#forge:plates/iron',
+        'P': 'gtceu:iron_plate',
         'B': 'minecraft:iron_block',
         'H': '#forge:tools/hammers'
     })
@@ -80,7 +80,7 @@ ServerEvents.recipes(e => {
         'S  '
     ], {
         'F': '#forge:tools/files',
-        'R': '#forge:rods/iron',
+        'R': 'gtceu:iron_rod',
         'H': '#forge:tools/hammers',
         'S': 'minecraft:stick'
     })
@@ -99,7 +99,7 @@ ServerEvents.recipes(e => {
         ' PH',
         'S  '
     ], {
-        'P': '#forge:plates/iron',
+        'P': 'gtceu:iron_plate',
         'F': '#forge:tools/files',
         'H': '#forge:tools/hammers',
         'S': 'minecraft:stick'
@@ -110,7 +110,7 @@ ServerEvents.recipes(e => {
         'HRF',
         ' R '
     ], {
-        'R': '#forge:rods/iron',
+        'R': 'gtceu:iron_rod',
         'F': '#forge:tools/files',
         'H': '#forge:tools/hammers'
     })
