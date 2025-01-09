@@ -39,22 +39,25 @@ ServerEvents.tags('item', e => {
         e.removeAllTagsFrom(item)
     })
 
+    // Serverside hiding through tags, to take advantage of gt registry rather than regex
     GTMaterialRegistry.getRegisteredMaterials().forEach(id => {
         let material = id.name
-        console.log(material)
-    /**
-     * Removes the given material from the given tag if there are any items -
-     * inside that tag that match the material. This is used to remove all GT -
-     * materials that are not needed from the various material categories.
-     * @param {string} material - The material to remove from the tag (e.g. "iron")
-     * @param {string} tag - The tag to remove the material from (e.g. "gears")
-     */
+        /**
+         * Removes the given material from the given tag if there are any items -
+         * inside that tag that match the material. This is used to remove all GT -
+         * materials that are not needed from the various material categories.
+         * @param {string} material - The material to remove from the tag (e.g. "iron")
+         * @param {string} tag - The tag to remove the material from (e.g. "gears")
+         */
         function removeIfNotEmpty(material, tag) {
             if (Ingredient.of(`#forge:${tag}/${material}`).itemIds.length > 0) {
                 e.add('c:hidden_from_recipe_viewers', `#forge:${tag}/${material}`)
             }
         }
 
+        removeIfNotEmpty(material, 'plates')
+        removeIfNotEmpty(material, 'double_plates')
+        removeIfNotEmpty(material, 'dense_plates')
         removeIfNotEmpty(material, 'gears')
         removeIfNotEmpty(material, 'foils')
         removeIfNotEmpty(material, 'small_gears')
@@ -67,7 +70,6 @@ ServerEvents.tags('item', e => {
         removeIfNotEmpty(material, 'small_springs')
         removeIfNotEmpty(material, 'fine_wires')
         removeIfNotEmpty(material, 'rounds')
-        removeIfNotEmpty(material, 'dense_plates')
         removeIfNotEmpty(material, 'rotors')
     })
 })

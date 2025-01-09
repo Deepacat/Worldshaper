@@ -1,6 +1,6 @@
 // this file is for itemstack hiding
-// see minecraft\kubejs\assets\emi\recipe\filters\hidecategories.json
-// for category hiding/mass group hiding
+// see minecraft\kubejs\assets\emi\recipe\filters\hidecategories.json for category hiding/mass group hiding
+// see minecraft\kubejs\server_scripts\initialRemovals.js for tag based hiding
 
 JEIEvents.hideItems(event => {
     event.hide([
@@ -19,10 +19,11 @@ JEIEvents.hideItems(event => {
         Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*chainsaw_head$/),
         Ingredient.of(/gtceu:(?!iron(_|$))(?!.*forge).*_hammer/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_mortar/),
-        Ingredient.of(/^gtceu:(?!([a-z]?v_)?steel).*_drill$/),
         Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_wirecutter$/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_wire_cutter/),
         Ingredient.of(/gtceu:(?!iron(_|$)).*_file/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?steel).*_drill$/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?steel).*_drill_head$/),
         Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_screwdriver$/),
         Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_screwdriver_tip$/),
         Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_wrench$/),
@@ -32,6 +33,8 @@ JEIEvents.hideItems(event => {
         Ingredient.of(/gtceu:(?!iron(_|$)).*_spade/),
         Ingredient.of(/gtceu:(?!rubber(_|$)).*_mallet/),
         Ingredient.of(/gtceu:(?!rubber(_|$)).*_plunger/),
+        Ingredient.of(/^gtceu:(?!([a-z]?v_)?iron).*_turbine_blade$/),
+
         // vanilla gt tools
         Ingredient.of(/gtceu:.*_sword/),
         Ingredient.of(/gtceu:.*_pickaxe/),
