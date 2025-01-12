@@ -8,8 +8,9 @@ ServerEvents.recipes(e => {
 })
 
 // Plate recipes
-plateRecipe('#forge:ingots/iron', 'iron', 3)
-plateRecipe('#forge:ingots/gold', 'gold', 2)
-plateRecipe('#forge:ingots/copper', 'copper', 3)
-plateRecipe('#forge:ingots/tin', 'tin', 3)
-plateRecipe('#forge:ingots/lead', 'lead', 3)
+plateRecipe(GTMaterials.Iron, '', 3)
+plateRecipe(GTMaterials.Gold, '', 2)
+plateRecipe(GTMaterials.Copper, '', 3)
+plateRecipe(GTMaterials.Tin, '', 3)
+plateRecipe(GTMaterials.Lead, '', 3)
+plateRecipe('#forge:gems/diamond', GTMaterials.Diamond, 3)
