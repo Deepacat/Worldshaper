@@ -16,7 +16,6 @@
  *                        2 = Forge hammer and bender,
  *                        1 = Only bender.
  */
-
 function plateRecipe(input, output, mode) {
     if (input.toString().includes('gtceu:')) {
         output = ChemicalHelper['get(com.gregtechceu.gtceu.api.data.tag.TagPrefix,com.gregtechceu.gtceu.api.data.chemical.material.Material)'](TagPrefix.plate, input).id
@@ -24,8 +23,6 @@ function plateRecipe(input, output, mode) {
     } else {
         output = ChemicalHelper['get(com.gregtechceu.gtceu.api.data.tag.TagPrefix,com.gregtechceu.gtceu.api.data.chemical.material.Material)'](TagPrefix.plate, output).id
     }
-
-    console.log(input, output)
 
     ServerEvents.recipes(e => {
         if (mode >= 3) {
@@ -54,8 +51,48 @@ function plateRecipe(input, output, mode) {
                 .duration(500)
         }
     })
+    unhideTag(`#forge:plates/${output.split(':')[1].replace('_plate', '')}`)
+}
+/**
+ * Creates rod recipes for the specified input material.
+ *
+ * Depending on the input type and mode, it generates different types of recipes
+ * for converting the input into an output rod using various methods such as filing,
+ * or lathe.
+ *
+ * @param {string} material - The input material for the recipe. If it includes 'gtceu:', 
+ *                            it is assumed to be a GTCEu material and will be processed accordingly.
+ * @param {number} mode - Determines the type of recipes to generate:
+ *                        2 = All methods (filing, lathe),
+ *                        1 = Only lathe.
+ */
+function rodRecipe(material, mode) {
+    let output = ChemicalHelper['get(com.gregtechceu.gtceu.api.data.tag.TagPrefix,com.gregtechceu.gtceu.api.data.chemical.material.Material)'](TagPrefix.rod, material).id
+    let input = ChemicalHelper['get(com.gregtechceu.gtceu.api.data.tag.TagPrefix,com.gregtechceu.gtceu.api.data.chemical.material.Material)'](TagPrefix.ingot, material).id
+
+    ServerEvents.recipes(e => {
+        if (mode >= 2) {
+            e.shaped(output, [
+                ' F ',
+                ' R '
+            ], {
+                'F': '#forge:tools/files',
+                'R': input
+            }).id(`kubejs:filing/${output.split(':')[1]}`)
+        }
+        if (mode >= 1) {
+            e.recipes.gtceu.lathe(`kubejs:lathe/${output.split(':')[1]}`)
+                .itemInputs(`1x ${input}`)
+                .itemOutputs(`2x ${output}`)
+                .EUt(8)
+                .duration(400)
+        }
+    })
+    unhideTag(`#forge:rods/${output.split(':')[1].replace('_rod', '')}`)
+}
+
+function unhideTag(ingredient) {
     ServerEvents.tags('item', e => {
-        console.log(`#forge:plates/${output.split(':')[1]}`)
-        e.remove('c:hidden_from_recipe_viewers', `#forge:plates/${output.split(':')[1].replace('_plate', '')}`)
+        e.remove('c:hidden_from_recipe_viewers', ingredient)
     })
 }
