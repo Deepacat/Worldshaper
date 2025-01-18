@@ -15,6 +15,11 @@ plateRecipe(GTMaterials.Tin, '', 3)
 plateRecipe(GTMaterials.Lead, '', 3)
 plateRecipe('#forge:gems/diamond', GTMaterials.Diamond, 3)
 
+// Rod recipes
 rodRecipe(GTMaterials.Iron, 2)
 rodRecipe(GTMaterials.Tin, 2)
 rodRecipe(GTMaterials.Copper, 2)
+
+// Gear recipes
+gearRecipe(GTMaterials.Iron, 2)
+gearRecipe(GTMaterials.Bronze, 2)

@@ -91,6 +91,36 @@ function rodRecipe(material, mode) {
     unhideTag(`#forge:rods/${output.split(':')[1].replace('_rod', '')}`)
 }
 
+function gearRecipe(material, mode) {
+    let rod = ChemicalHelper['get(com.gregtechceu.gtceu.api.data.tag.TagPrefix,com.gregtechceu.gtceu.api.data.chemical.material.Material)'](TagPrefix.rod, material).id
+    let gear = ChemicalHelper['get(com.gregtechceu.gtceu.api.data.tag.TagPrefix,com.gregtechceu.gtceu.api.data.chemical.material.Material)'](TagPrefix.gear, material).id
+    let plate = ChemicalHelper['get(com.gregtechceu.gtceu.api.data.tag.TagPrefix,com.gregtechceu.gtceu.api.data.chemical.material.Material)'](TagPrefix.plate, material).id
+    let ingot = ChemicalHelper['get(com.gregtechceu.gtceu.api.data.tag.TagPrefix,com.gregtechceu.gtceu.api.data.chemical.material.Material)'](TagPrefix.ingot, material).id
+
+    ServerEvents.recipes(e => {
+        if (mode >= 2) {
+            e.shaped(gear, [
+                'PRP',
+                'RHR',
+                'PRP'
+            ], {
+                'P': plate,
+                'R': rod,
+                'H': '#forge:tools/hammers'
+            }).id(`kubejs:gears/${gear.split(':')[1]}`)
+        }
+        if (mode >= 1) {
+            e.recipes.gtceu.extruder(`kubejs:extruder/${gear.split(':')[1]}`)
+                .itemInputs(`4x ${ingot}`)
+                .notConsumable('gtceu:gear_extruder_mold')
+                .itemOutputs(`1x ${gear}`)
+                .EUt(8)
+                .duration(600)
+        }
+    })
+    unhideTag(`#forge:gears/${gear.split(':')[1].replace('_gear', '')}`)
+}
+
 function unhideTag(ingredient) {
     ServerEvents.tags('item', e => {
         e.remove('c:hidden_from_recipe_viewers', ingredient)
