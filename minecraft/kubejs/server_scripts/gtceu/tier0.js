@@ -23,3 +23,9 @@ rodRecipe(GTMaterials.Copper, 2)
 // Gear recipes
 gearRecipe(GTMaterials.Iron, 2)
 gearRecipe(GTMaterials.Bronze, 2)
+
+// Screw recipes
+screwRecipe(GTMaterials.Iron, 2)
+
+// Bolt recipes
+boltRecipe(GTMaterials.Iron, 2)

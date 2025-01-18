@@ -121,6 +121,57 @@ function gearRecipe(material, mode) {
     unhideTag(`#forge:gears/${gear.split(':')[1].replace('_gear', '')}`)
 }
 
+function boltRecipe(material, mode) {
+    let rod = ChemicalHelper['get(com.gregtechceu.gtceu.api.data.tag.TagPrefix,com.gregtechceu.gtceu.api.data.chemical.material.Material)'](TagPrefix.rod, material).id
+    let bolt = ChemicalHelper['get(com.gregtechceu.gtceu.api.data.tag.TagPrefix,com.gregtechceu.gtceu.api.data.chemical.material.Material)'](TagPrefix.bolt, material).id
+    let ingot = ChemicalHelper['get(com.gregtechceu.gtceu.api.data.tag.TagPrefix,com.gregtechceu.gtceu.api.data.chemical.material.Material)'](TagPrefix.ingot, material).id
+
+    ServerEvents.recipes(e => {
+        if (mode >= 2) {
+            e.shaped(`2x ${bolt}`, [
+                'RS '
+            ], {
+                'R': rod,
+                'S': '#forge:tools/saws'
+            }).id(`kubejs:bolts/${bolt.split(':')[1]}`)
+        }
+        if (mode >= 1) {
+            e.recipes.gtceu.extruder(`kubejs:extruder/${bolt.split(':')[1]}`)
+                .itemInputs(`1x ${ingot}`)
+                .notConsumable('gtceu:bolt_extruder_mold')
+                .itemOutputs(`8x ${bolt}`)
+                .EUt(8)
+                .duration(600)
+        }
+    })
+    unhideTag(`#forge:bolts/${bolt.split(':')[1].replace('_bolt', '')}`)
+}
+
+function screwRecipe(material, mode) {
+    let bolt = ChemicalHelper['get(com.gregtechceu.gtceu.api.data.tag.TagPrefix,com.gregtechceu.gtceu.api.data.chemical.material.Material)'](TagPrefix.bolt, material).id
+    let screw = ChemicalHelper['get(com.gregtechceu.gtceu.api.data.tag.TagPrefix,com.gregtechceu.gtceu.api.data.chemical.material.Material)'](TagPrefix.screw, material).id
+
+    ServerEvents.recipes(e => {
+        if (mode >= 2) {
+            e.shaped(screw, [
+                'FB '
+            ], {
+                'B': bolt,
+                'F': '#forge:tools/files',
+
+            }).id(`kubejs:screws/${screw.split(':')[1]}`)
+        }
+        if (mode >= 1) {
+            e.recipes.gtceu.lathe(`kubejs:lathe/${screw.split(':')[1]}`)
+                .itemInputs(`1x ${bolt}`)
+                .itemOutputs(`2x ${screw}`)
+                .EUt(8)
+                .duration(600)
+        }
+    })
+    unhideTag(`#forge:screws/${screw.split(':')[1].replace('_screw', '')}`)
+}
+
 function unhideTag(ingredient) {
     ServerEvents.tags('item', e => {
         e.remove('c:hidden_from_recipe_viewers', ingredient)
