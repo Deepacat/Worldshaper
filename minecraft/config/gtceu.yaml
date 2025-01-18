@@ -115,7 +115,7 @@ worldgen:
   oreVeins:
     # The grid size (in chunks) for ore vein generation
     # Default: 3
-    oreVeinGridSize: 10
+    oreVeinGridSize: 12
 
     # The maximum random offset (in blocks) from the grid for generating an ore vein.
     # Default: 12
@@ -513,6 +513,17 @@ compat:
 
   # Config options regarding GTCEu compatibility with minimap mods
   minimap:
+    # Toggle specific map mod integration on/off (need to restart for this to take effect)
+    toggle:
+      # FTB Chunks integration enabled
+      ftbChunksIntegration: false
+
+      # Journey Map integration enabled
+      journeyMapIntegration: true
+
+      # Xaerox's map integration enabled
+      xaerosMapIntegration: true
+
     # The radius, in blocks, that picking up a surface rock will search for veins in.
     # -1 to disable.
     # Default: 24
@@ -554,7 +565,7 @@ compat:
 
     # Whether to put buttons on a separate toolbar on the right instead of the map type toolbar in JourneyMap.
     # Default: true
-    rightToolbar: true
+    rightToolbar: false
 
   # Whether to hide facades of all blocks in JEI and creative search menu.
   # Default: true

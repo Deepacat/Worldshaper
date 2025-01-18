@@ -3,8 +3,8 @@ GTCEuServerEvents.oreVeins(event => {
 
     event.add('kubejs:overworld/iron', vein => {
         vein.weight(70)
-        vein.clusterSize(50)
-        vein.density(0.8)
+        vein.clusterSize(85)
+        vein.density(0.9)
         vein.discardChanceOnAirExposure(1)
         vein.layer("owstones")
         vein.dimensions("minecraft:overworld", "worldshaper:wsoverworld")
@@ -20,8 +20,8 @@ GTCEuServerEvents.oreVeins(event => {
     })
     event.add('kubejs:overworld/copper', vein => {
         vein.weight(75)
-        vein.clusterSize(50)
-        vein.density(0.8)
+        vein.clusterSize(90)
+        vein.density(0.9)
         vein.discardChanceOnAirExposure(1)
         vein.layer("owstones")
         vein.dimensions("minecraft:overworld", "worldshaper:wsoverworld")
@@ -37,8 +37,8 @@ GTCEuServerEvents.oreVeins(event => {
     })
     event.add('kubejs:overworld/tin', vein => {
         vein.weight(60)
-        vein.clusterSize(50)
-        vein.density(0.8)
+        vein.clusterSize(85)
+        vein.density(0.9)
         vein.discardChanceOnAirExposure(1)
         vein.layer("owstones")
         vein.dimensions("minecraft:overworld", "worldshaper:wsoverworld")
@@ -53,8 +53,8 @@ GTCEuServerEvents.oreVeins(event => {
     })
     event.add('kubejs:overworld/lead', vein => {
         vein.weight(55)
-        vein.clusterSize(50)
-        vein.density(0.8)
+        vein.clusterSize(70)
+        vein.density(0.9)
         vein.discardChanceOnAirExposure(1)
         vein.layer("owstones")
         vein.dimensions("minecraft:overworld", "worldshaper:wsoverworld")
@@ -69,8 +69,8 @@ GTCEuServerEvents.oreVeins(event => {
     })
     event.add('kubejs:overworld/coal', vein => {
         vein.weight(55)
-        vein.clusterSize(50)
-        vein.density(0.8)
+        vein.clusterSize(100)
+        vein.density(0.9)
         vein.discardChanceOnAirExposure(1)
         vein.layer("owstones")
         vein.dimensions("minecraft:overworld", "worldshaper:wsoverworld")
