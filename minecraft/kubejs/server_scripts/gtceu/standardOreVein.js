@@ -1,3 +1,7 @@
+
+const WorldGenLayers = Java.loadClass("com.gregtechceu.gtceu.api.data.worldgen.WorldGenLayers")
+
+
 GTCEuServerEvents.oreVeins(event => {
     event.removeAll()
 /*
