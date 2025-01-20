@@ -1,6 +1,6 @@
 GTCEuServerEvents.oreVeins(event => {
     event.removeAll()
-
+/*
     event.add('kubejs:overworld/iron', vein => {
         vein.weight(70)
         vein.clusterSize(85)
@@ -67,7 +67,7 @@ GTCEuServerEvents.oreVeins(event => {
             )
         )
     })
-    event.add('kubejs:overworld/coal', vein => {
+*/
     event.add('kubejs:overworld/cupric', vein => {
         vein.weight(100)
         vein.clusterSize(40)
