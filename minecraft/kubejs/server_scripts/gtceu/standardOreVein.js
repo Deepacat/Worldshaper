@@ -136,6 +136,38 @@ GTCEuServerEvents.oreVeins(event => {
             )
         )
     })
+    event.add('kubejs:overworld/anthracite', vein => {
+        vein.weight(75)
+        vein.clusterSize(50)
+        vein.density(1)
+        vein.discardChanceOnAirExposure(0.1)
+        vein.layer("owstones")
+        vein.dimensions("minecraft:overworld", "worldshaper:wsoverworld")
+        vein.heightRangeUniform(10,50)
+        vein.layeredVeinGenerator(generator => generator
+            .buildLayerPattern( pattern => pattern
+                .layer(l => l.weight(50).mat(GTMaterials.get('anthracite')).size(1, 2))
+                .layer(l => l.weight(30).block(() => Block.getBlock('gtceu:raw_anthracite_block')).size(1, 1))
+                //.withBlock(() => Block.getBlock('gtceu:raw_anthracite_block'), 7)
+            )   
+        )
+    })
+    event.add('kubejs:overworld/lignite', vein => {
+        vein.weight(80)
+        vein.clusterSize(75)
+        vein.density(0.9)
+        vein.discardChanceOnAirExposure(0.1)
+        vein.layer("owstones")
+        vein.dimensions("minecraft:overworld", "worldshaper:wsoverworld")
+        vein.heightRangeUniform(10,70)
+        vein.layeredVeinGenerator(generator => generator
+            .buildLayerPattern( pattern => pattern
+                .layer(l => l.weight(50).mat(GTMaterials.get('lignite')).size(1, 2))
+                .layer(l => l.weight(30).block(() => Block.getBlock('gtceu:raw_lignite_block')).size(1, 2))
+            )   
+        )
+    })
+    event.add('kubejs:overworld/coals', vein => {
         vein.weight(55)
         vein.clusterSize(100)
         vein.density(0.9)
@@ -145,9 +177,10 @@ GTCEuServerEvents.oreVeins(event => {
         vein.heightRangeUniform(10, 30)
         vein.layeredVeinGenerator(generator => generator
             .buildLayerPattern(pattern => pattern
-                .layer(l => l.weight(35).mat(GTMaterials.Coal).size(2, 4))
-                .layer(l => l.weight(35).mat(GTMaterials.Coal).size(2, 4))
-                // .layer(l => l.weight(1).block(() => Block.getBlock('gtceu:raw_lead_block')).size(1, 1))
+                .layer(l => l.weight(45).mat(GTMaterials.Coal).size(1, 4))
+                .layer(l => l.weight(35).mat(GTMaterials.get('bituminous_coal')).size(2, 4))
+                .layer(l => l.weight(10).block(() => Block.getBlock('gtceu:raw_coal_block')).size(1, 2))
+                .layer(l => l.weight(10).block(() => Block.getBlock('gtceu:raw_bituminous_coal_block')).size(1, 2))
             )
         )
     })
