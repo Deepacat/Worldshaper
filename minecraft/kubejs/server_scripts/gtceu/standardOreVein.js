@@ -85,6 +85,23 @@ GTCEuServerEvents.oreVeins(event => {
             )
         )
     })
+    event.add('kubejs:overworld/ferrous', vein => {
+        vein.weight(80)
+        vein.clusterSize(50)
+        vein.density(0.7)
+        vein.discardChanceOnAirExposure(0.3)
+        vein.layer("owstones")
+        vein.dimensions("minecraft:overworld", "worldshaper:wsoverworld")
+        vein.heightRangeUniform(-10, 30)
+        vein.layeredVeinGenerator(generator => generator
+            .buildLayerPattern(pattern => pattern
+                .layer(l => l.weight(50).mat(GTMaterials.get('ferrous_minerals')).size(2, 4))
+                .layer(l => l.weight(50).mat(GTMaterials.get('ferrous_minerals')).size(1, 4))
+                .layer(l => l.weight(5).block(() => Block.getBlock('gtceu:raw_ferrous_minerals_block')).size(1, 4))
+                .layer(l => l.weight(10).mat(GTMaterials.Iron).size(1, 2))
+            )
+        )
+    })
         vein.weight(55)
         vein.clusterSize(100)
         vein.density(0.9)
