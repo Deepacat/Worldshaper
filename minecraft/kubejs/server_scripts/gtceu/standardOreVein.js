@@ -119,6 +119,23 @@ GTCEuServerEvents.oreVeins(event => {
             )
         )
     })
+    event.add('kubejs:overworld/stannic', vein => {
+        vein.weight(70)
+        vein.clusterSize(35)
+        vein.density(0.9)
+        vein.discardChanceOnAirExposure(0.5)
+        vein.layer("owstones")
+        vein.dimensions("minecraft:overworld", "worldshaper:wsoverworld")
+        vein.heightRangeUniform(-10, 30)
+        vein.layeredVeinGenerator(generator => generator
+            .buildLayerPattern(pattern => pattern
+                .layer(l => l.weight(50).mat(GTMaterials.get('stannic_minerals')).size(2, 4))
+                .layer(l => l.weight(50).mat(GTMaterials.get('stannic_minerals')).size(2, 4))
+                .layer(l => l.weight(5).block(() => Block.getBlock('gtceu:raw_stannic_minerals_block')).size(1, 4))
+                .layer(l => l.weight(10).mat(GTMaterials.Tin).size(1, 2))
+            )
+        )
+    })
         vein.weight(55)
         vein.clusterSize(100)
         vein.density(0.9)
