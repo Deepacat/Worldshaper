@@ -43,6 +43,29 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0x808A77).iconSet(GTMaterialIconSet.DULL)
         .ore(1,1)
 
+// **********************************************************
+// COAL TYPES
+// **********************************************************
+    event.create("anthracite") //ANTHRACITE COAL
+        .gem()
+        .color(0x3F3E3A).iconSet(GTMaterialIconSet.LIGNITE)
+        .ore(2,1)
+        .element(GTElements.get(("carbon")))
+        .burnTime(2400)
+
+    event.create("bituminous_coal") //BITUMINOUS COAL
+        .gem()
+        .color(0x5B5D67).iconSet(GTMaterialIconSet.LIGNITE)
+        .ore(2,1)
+        .element(GTElements.get(("carbon")))
+        .burnTime(1600)
+
+    event.create("lignite") //LIGNITE COAL
+        .gem()
+        .color(0x493222).iconSet(GTMaterialIconSet.LIGNITE)
+        .ore(2,1)
+        .element(GTElements.get(("carbon")))
+        .burnTime(8000)
 })
 
 GTCEuStartupEvents.materialModification(() => {
