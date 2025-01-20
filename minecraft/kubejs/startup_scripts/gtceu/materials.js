@@ -20,6 +20,29 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .dust()
         .color(0x9fd5e8)
         .iconSet(GTMaterialIconSet.QUARTZ)
+
+
+// **********************************************************
+// MINERAL COMPOSITES
+// **********************************************************
+
+    event.create("ferrous_minerals") // IRON 
+        .dust()
+        .color(0xD8AF93).iconSet(GTMaterialIconSet.DULL)
+        .ore(2,1)
+    event.create("cupric_minerals") //COPPER
+        .dust()
+        .color(0x5F947A).iconSet(GTMaterialIconSet.DULL)
+        .ore(2,1)
+    event.create("plumbic_minerals") //LEAD
+        .dust()
+        .color(0x332A43).iconSet(GTMaterialIconSet.DULL)
+        .ore(1,1)
+    event.create("stannic_minerals") //TIN
+        .dust()
+        .color(0x808A77).iconSet(GTMaterialIconSet.DULL)
+        .ore(1,1)
+
 })
 
 GTCEuStartupEvents.materialModification(() => {
