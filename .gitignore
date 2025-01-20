@@ -15,6 +15,7 @@ minecraft/config/everycomp-hazardous.properties
 minecraft/config/konkrete/locals
 minecraft/config/jei*
 minecraft/config/emi.css
+minecraft/config/worldedit*
 minecraft/config/ae2/client.json
 minecraft/kubejs/server_scripts/example.js
 minecraft/config/spark/activity.json
