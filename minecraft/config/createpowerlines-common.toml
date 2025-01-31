@@ -5,22 +5,28 @@
 [general]
 	#If audio should be enabled or not.
 	audio_enabled = true
+	#Ignore checking if block face can support connector.
+	connector_ignore_face_check = true
+	#Allows blocks attached to a connector to freely pass energy to and from the connector network.
+	connector_allow_passive_io = true
 
-	#Wires
-	[general.wires]
-		#If the base mod connectors should be registered
-		use_base_connectors = true
-		#If the preset GT connectors should be registered
-		use_gt_connectors = true
-		#If the preset CCA connectors should be registered
-		use_cca_connectors = true
-		#If your custom connectors should be registered
-		use_custom_connectors = true
-		#Huge Connector max wire length in blocks.
-		#Range: 0 ~ 256
-		huge_connector_wire_length = 64
-		#Ignore checking if block face can support connector.
-		connector_ignore_face_check = true
-		#Allows blocks attached to a connector to freely pass energy to and from the connector network.
-		connector_allow_passive_io = true
+#Registry
+[registry]
+	#If the base mod connectors should be registered
+	use_base_connectors = false
+	#If the preset GT connectors should be registered
+	use_gt_connectors = true
+	#If the preset CCA connectors should be registered
+	use_cca_connectors = false
+
+#GregTech Compat Options
+[gregtech]
+	#The max tier gt connectors will register to
+	#Accepts values 0 (ULV) to 9 (UHV)
+	#Range: 0 ~ 9
+	gt_connectors_max_tier = 4
+	#If GT connectors should have recipes auto generated
+	gt_connector_recipes = false
+	#If GT wires should have recipes auto generated
+	gt_wire_recipes = true
 
