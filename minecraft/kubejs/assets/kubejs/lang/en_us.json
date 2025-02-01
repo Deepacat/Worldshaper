@@ -3,7 +3,19 @@
     "material.gtceu.cupric_minerals": "Cupric Minerals",
     "material.gtceu.plumbic_minerals": "Plumbic Minerals",
     "material.gtceu.stannic_minerals": "Stannic Minerals",
+
     "material.gtceu.anthracite": "Anthracite",
     "material.gtceu.bituminous_coal": "Bituminous Coal",
-    "material.gtceu.lignite": "Lignite"
+    "minecraft:coal": "Sub-Bituminous Coal",
+    "minecraft:coal_ore": "Sub-Bituminous Coal Ore",
+
+    "material.gtceu.lignite": "Lignite",
+    "gtceu.jei.ore_vein.overworld/ferrous": "Iron-Bearing Deposit",
+    "gtceu.jei.ore_vein.overworld/cupric": "Copper-Bearing Deposit",
+    "gtceu.jei.ore_vein.overworld/plumbic": "Lead-Bearing Deposit",
+    "gtceu.jei.ore_vein.overworld/stannic": "Tin-Bearing Deposit",
+
+    "gtceu.jei.ore_vein.overworld/coals": "Mixed Coal Deposit",
+    "gtceu.jei.ore_vein.overworld/anthracite": "Anthracite Deposit",
+    "gtceu.jei.ore_vein.overworld/lignite": "Lignite Sheet Formation"
 }
