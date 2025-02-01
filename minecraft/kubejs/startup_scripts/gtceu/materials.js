@@ -65,7 +65,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0x493222).iconSet(GTMaterialIconSet.LIGNITE)
         .ore(2,1)
         .element(GTElements.get(("carbon")))
-        .burnTime(8000)
+        .burnTime(1000)
 })
 
 GTCEuStartupEvents.materialModification(() => {
