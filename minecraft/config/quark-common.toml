@@ -770,7 +770,7 @@
 	"Azalea Wood" = false
 	"Big Stone Clusters" = true
 	"Blossom Trees" = false
-	"Chorus Vegetation" = true
+	"Chorus Vegetation" = false
 	Corundum = true
 	"Fairy Rings" = false
 	"Fallen Logs" = true
@@ -1325,7 +1325,7 @@
 	[world.spiral_spires]
 		Rarity = 200
 		Radius = 15
-		"Enable Myalite Viaducts" = false
+		"Enable Myalite Viaducts" = true
 		#Allowed values: [2,1,024]
 		"Myalite Conduit Distance" = 24
 		"Renewable Myalite" = false
