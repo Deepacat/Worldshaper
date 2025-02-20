@@ -1,0 +1,21 @@
+{
+    "feature": "minecraft:ore_iron",
+    "placement": [
+        {
+            "type": "minecraft:rarity_filter",
+            "chance": 10000000
+        },
+        {
+            "type": "minecraft:height_range",
+            "height": {
+                "type": "minecraft:trapezoid",
+                "max_inclusive": {
+                    "absolute": 0
+                },
+                "min_inclusive": {
+                    "absolute": 0
+                }
+            }
+        }
+    ]
+}
