@@ -10,7 +10,7 @@ modlist.html
 !/minecraft/config/icon.png
 !/minecraft/mods/worldshaper*
 
-minecraft/config/alexsmobs*
+minecraft/config/alexsmobs/*
 minecraft/config/everycomp-hazardous.properties
 minecraft/config/konkrete/locals
 minecraft/config/jei*
