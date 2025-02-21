@@ -1,0 +1,10 @@
+{
+    "type": "forge:add_features",
+    "biomes": "#minecraft:is_overworld",
+    "features": [
+        "worldshaper:ws_ore_tin",
+        "worldshaper:ws_ore_copper",
+        "worldshaper:ws_ore_iron"
+    ],
+    "step": "underground_ores"
+}

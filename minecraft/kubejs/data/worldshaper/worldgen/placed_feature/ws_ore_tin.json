@@ -1,21 +1,27 @@
 {
-    "feature": "minecraft:ore_iron",
+    "feature": "worldshaper:ws_ore_tin",
     "placement": [
         {
             "type": "minecraft:rarity_filter",
-            "chance": 10000000
+            "chance": 10
+        },
+        {
+            "type": "minecraft:in_square"
         },
         {
             "type": "minecraft:height_range",
             "height": {
                 "type": "minecraft:trapezoid",
                 "max_inclusive": {
-                    "absolute": 0
+                    "absolute": 58
                 },
                 "min_inclusive": {
-                    "absolute": 0
+                    "absolute": 20
                 }
             }
+        },
+        {
+            "type": "minecraft:biome"
         }
     ]
 }

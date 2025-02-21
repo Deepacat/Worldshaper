@@ -1,9 +1,9 @@
 {
-    "feature": "minecraft:ore_copper_large",
+    "feature": "worldshaper:ws_ore_copper",
     "placement": [
         {
             "type": "minecraft:rarity_filter",
-            "chance": 8
+            "chance": 9
         },
         {
             "type": "minecraft:in_square"
