@@ -15,7 +15,7 @@
       "energy": "HigherRule",
       "experience": "HigherRule"
     },
-    "shouldSanitize": false
+    "shouldSanitize": true
   },
   "overrideDuplicateRules": {
     "minecraft:crafting_shaped": {
@@ -28,7 +28,7 @@
         "group"
       ],
       "rules": {},
-      "shouldSanitize": false
+      "shouldSanitize": true
     }
   },
   "strictMode": false
