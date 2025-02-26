@@ -1,0 +1,213 @@
+{
+  "name": {
+    "text": "Machine Workbench"
+  },
+  "appearance": {},
+  "components": [
+    {
+      "type": "custommachinery:item",
+      "id": "in0",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in1",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in2",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in3",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in4",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in5",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in6",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in7",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "in8",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "variant": "custommachinery:result",
+      "id": "out0",
+      "mode": "output"
+    }
+  ],
+  "gui": [
+    {
+      "type": "custommachinery:background",
+      "texture": "kubejs:textures/gui/science_station_background.png",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "type": "custommachinery:player_inventory",
+      "x": 47,
+      "y": 128
+    },
+    {
+      "type": "custommachinery:progress",
+      "x": 122,
+      "y": 81
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in0",
+      "priority": 9,
+      "x": 59,
+      "y": 62,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in1",
+      "priority": 8,
+      "x": 77,
+      "y": 62,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in2",
+      "priority": 7,
+      "x": 95,
+      "y": 62,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in3",
+      "priority": 6,
+      "x": 59,
+      "y": 80,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in4",
+      "priority": 5,
+      "x": 77,
+      "y": 80,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in5",
+      "priority": 4,
+      "x": 95,
+      "y": 80,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in6",
+      "priority": 3,
+      "x": 59,
+      "y": 98,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in7",
+      "priority": 2,
+      "x": 77,
+      "y": 98,
+      "width": 18,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "in8",
+      "priority": 1,
+      "x": 95,
+      "y": 98,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "out0",
+      "priority": 1,
+      "x": 154,
+      "y": 78,
+      "width": 24,
+      "height": 24,
+      "ghost": {
+        "items": [
+          "minecraft:air"
+        ],
+        "color": {}
+      }
+    }
+  ],
+  "processor": {
+    "type": "custommachinery:craft"
+  }
+}
