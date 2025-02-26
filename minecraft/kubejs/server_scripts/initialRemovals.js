@@ -1,16 +1,5 @@
 //priority: 999
 ServerEvents.recipes(e => {
-    // The beginning of suffering. (Nukes most gt recipes)
-    e.remove({
-        mod: "gtceu",
-        not: [
-            { type: "gtceu:coal_burner" },
-            { type: "gtceu:packer" },
-            { id: /gtceu:compressor\/compress.*/ },
-            { id: /gtceu:extractor\/extract.*/ },
-        ]
-    })
-
     // large recipe groups for removing
     let removeTypes = [
         //Pneumaticcraft
@@ -32,14 +21,15 @@ ServerEvents.recipes(e => {
         { type: "ad_astra:compressing" },
         { type: "ad_astra:alloying" },
         { type: "ad_astra:refining" },
+        { mod: "ad_astra", type: "ad_astra:" },
         //AlexMobs
         { type: "alexsmobs:capsid" },
         { type: "alexscaves:nuclear_furnace" },
         { type: "alexscaves:spelunkery_table" },
         //Create + Addons
         { type: "createaddition:rolling" },
-        { type: "create:pressing" }, 
-        { output: "create:experience_nugget", type: "create:crushing" }
+        { type: "create:pressing" },
+        { output: "create:experience_nugget", type: "minecraft:crafting", not: { id: /.*block.*/} }
     ]
 
     removeTypes.forEach(recipeType => {
