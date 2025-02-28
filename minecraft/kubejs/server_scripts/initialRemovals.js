@@ -1,7 +1,7 @@
 //priority: 999
 ServerEvents.recipes(e => {
-    // large recipe groups for removing
-    let removeTypes = [
+    // recipe filters for removal without replacing immediately
+    let removals = [
         //Pneumaticcraft
         { type: "pneumaticcraft:explosion_crafting" },
         { type: "pneumaticcraft:etching_tank" },
@@ -21,7 +21,7 @@ ServerEvents.recipes(e => {
         { type: "ad_astra:compressing" },
         { type: "ad_astra:alloying" },
         { type: "ad_astra:refining" },
-        { mod: "ad_astra", type: "ad_astra:" },
+        { id: "ad_astra:iron_rod" },
         //AlexMobs
         { type: "alexsmobs:capsid" },
         { type: "alexscaves:nuclear_furnace" },
@@ -29,10 +29,10 @@ ServerEvents.recipes(e => {
         //Create + Addons
         { type: "createaddition:rolling" },
         { type: "create:pressing" },
-        { output: "create:experience_nugget", type: "minecraft:crafting", not: { id: /.*block.*/} }
+        { output: "create:experience_nugget", type: "minecraft:crafting", not: { id: /.*block.*/ } }
     ]
 
-    removeTypes.forEach(recipeType => {
+    removals.forEach(recipeType => {
         e.remove(recipeType)
     })
 
@@ -48,37 +48,38 @@ ServerEvents.tags('item', e => {
         e.removeAllTagsFrom(item)
     })
 
-    // Serverside hiding through tags, to take advantage of gt registry rather than regex
-    GTMaterialRegistry.getRegisteredMaterials().forEach(id => {
-        let material = id.name
-        /**
-         * Removes the given material from the given tag if there are any items -
-         * inside that tag that match the material. This is used to remove all GT -
-         * materials that are not needed from the various material categories.
-         * @param {string} material - The material to remove from the tag (e.g. "iron")
-         * @param {string} tag - The tag to remove the material from (e.g. "gears")
-         */
-        function removeIfNotEmpty(material, tag) {
-            if (Ingredient.of(`#forge:${tag}/${material}`).itemIds.length > 0) {
-                e.add('c:hidden_from_recipe_viewers', `#forge:${tag}/${material}`)
-            }
-        }
+    // // Serverside hiding through tags, to take advantage of gt registry rather than regex
+    // GTMaterialRegistry.getRegisteredMaterials().forEach(id => {
+    //     let material = id.name
+    //     /**
+    //      * Removes the given material from the given tag if there are any items -
+    //      * inside that tag that match the material. This is used to remove all GT -
+    //      * materials that are not needed from the various material categories.
+    //      * @param {string} material - The material to remove from the tag (e.g. "iron")
+    //      * @param {string} tag - The tag to remove the material from (e.g. "gears")
+    //      */
+    //     function removeIfNotEmpty(material, tag) {
+    //         if (Ingredient.of(`#forge:${tag}/${material}`).itemIds.length > 0) {
+    //             e.add('c:hidden_from_recipe_viewers', `#forge:${tag}/${material}`)
+    //         }
+    //     }
 
-        removeIfNotEmpty(material, 'plates')
-        removeIfNotEmpty(material, 'double_plates')
-        removeIfNotEmpty(material, 'dense_plates')
-        removeIfNotEmpty(material, 'gears')
-        removeIfNotEmpty(material, 'foils')
-        removeIfNotEmpty(material, 'small_gears')
-        removeIfNotEmpty(material, 'screws')
-        removeIfNotEmpty(material, 'bolts')
-        removeIfNotEmpty(material, 'rods')
-        removeIfNotEmpty(material, 'rods/long')
-        removeIfNotEmpty(material, 'rings')
-        removeIfNotEmpty(material, 'springs')
-        removeIfNotEmpty(material, 'small_springs')
-        removeIfNotEmpty(material, 'fine_wires')
-        removeIfNotEmpty(material, 'rounds')
-        removeIfNotEmpty(material, 'rotors')
-    })
+    //     removeIfNotEmpty(material, 'plates')
+    //     removeIfNotEmpty(material, 'double_plates')
+    //     removeIfNotEmpty(material, 'dense_plates')
+    //     removeIfNotEmpty(material, 'gears')
+    //     removeIfNotEmpty(material, 'foils')
+    //     removeIfNotEmpty(material, 'small_gears')
+    //     removeIfNotEmpty(material, 'screws')
+    //     removeIfNotEmpty(material, 'bolts')
+    //     removeIfNotEmpty(material, 'rods')
+    //     removeIfNotEmpty(material, 'rods/long')
+    //     removeIfNotEmpty(material, 'rings')
+    //     removeIfNotEmpty(material, 'springs')
+    //     removeIfNotEmpty(material, 'small_springs')
+    //     removeIfNotEmpty(material, 'fine_wires')
+    //     removeIfNotEmpty(material, 'rounds')
+    //     removeIfNotEmpty(material, 'rotors')
+    // })
+
 })

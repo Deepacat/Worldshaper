@@ -31,5 +31,8 @@ StartupEvents.registry('item', e => {
     makeSciencePack('forlorn_science_pack', '§cForlorn Science Pack')
     makeSciencePack('corrupted_science_pack', '§4Co§kr§r§4rrupt§ke§r§4d Sc§ki§r§4en§kc§r§4e P§ka§r§4ck')
 
-    e.create('quarry_kit').maxStackSize(16).tooltip('§7Right click to get the items for a steam quarry').displayName('§6Quarry Kit')
+    e.create('quarry_kit').maxStackSize(1).tooltip('§7Right click to get the items for a steam quarry').displayName('§6Quarry Kit')
+    e.create('ceramic_ball').tooltip('A perfect sphere of ceramic, perfect for making a mold around').displayName('Ceramic Ball')
+    e.create('clay_ball_casting_mold').tooltip('The form for a ceramic casting mold, needs to be fired').displayName('Clay Ball Casting Mold')
+    e.create('ceramic_ball_casting_mold').tooltip('A fragile mold, used for casting glass tube').displayName('Ceramic Ball Casting Mold')
 })
