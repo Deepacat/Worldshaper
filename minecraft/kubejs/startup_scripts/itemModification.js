@@ -5,6 +5,7 @@ ItemEvents.modification(e => {
         })
     }
 
+    fireImmune('iron_ingot')
     fireImmune('gtceu:glass_dust')
     fireImmune('gtceu:glass_tube')
     fireImmune('minecraft:clay_ball')

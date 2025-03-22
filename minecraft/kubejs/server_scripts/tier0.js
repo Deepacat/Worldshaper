@@ -1,10 +1,10 @@
 //priority: 1
 ServerEvents.recipes(e => {
     // ULV Machine Recipes
-    e.recipes.gtceu.coal_burner_recipe_type('kubejs:gtceu/test/coal_tag_burning')
-        .itemInputs('#minecraft:coals')
-        .EUt(-8)
-        .duration(200)
+    // e.recipes.gtceu.coal_burner_recipe_type('kubejs:gtceu/test/coal_tag_burning')
+    //     .itemInputs('#minecraft:coals')
+    //     .EUt(-8)
+    //     .duration(200)
 
     e.recipes.custommachinery.custom_craft('custommachinery:machine_workbench', 'minecraft:dirt')
         .jei()
@@ -62,6 +62,8 @@ ServerEvents.recipes(e => {
         'H': '#forge:tools/hammers',
         'P': '#minecraft:planks'
     })
+    e.replaceInput({ id: 'ulvcovm:shaped/ulv_electric_motor' }, 'gtceu:magnetic_iron_rod', 'gtceu:iron_rod')
+    e.replaceInput({ id: 'immersive_aircraft:engine'}, 'minecraft:piston', 'ulvcovm:ulv_electric_piston')
 })
 
 // Plate recipes
