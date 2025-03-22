@@ -1,9 +1,9 @@
 {
-    "feature": "worldshaper:ws_ore_iron",
+    "feature": "worldshaper:ws_ore_lead",
     "placement": [
         {
             "type": "minecraft:rarity_filter",
-            "chance": 14
+            "chance": 12
         },
         {
             "type": "minecraft:in_square"

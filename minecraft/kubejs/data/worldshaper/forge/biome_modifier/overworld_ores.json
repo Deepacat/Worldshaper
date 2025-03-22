@@ -4,7 +4,8 @@
     "features": [
         "worldshaper:ws_ore_tin",
         "worldshaper:ws_ore_copper",
-        "worldshaper:ws_ore_iron"
+        "worldshaper:ws_ore_iron",
+        "worldshaper:ws_ore_lead"
     ],
     "step": "underground_ores"
 }
