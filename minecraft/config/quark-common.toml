@@ -197,8 +197,8 @@
 
 	[building.leaf_carpet]
 		#This feature disables itself if any of the following mods are loaded:
-		# - immersive_weathering
 		# - woodworks
+		# - immersive_weathering
 		#This is done to prevent content overlap.
 		#You can turn this on to force the feature to be loaded even if the above mods are also loaded.
 		"Ignore Anti Overlap" = false
@@ -237,8 +237,8 @@
 		#Allowed values: [0,1]
 		"Fall Damage Multiplier" = 0.5
 		#This feature disables itself if any of the following mods are loaded:
-		# - environmental
 		# - goated
+		# - environmental
 		#This is done to prevent content overlap.
 		#You can turn this on to force the feature to be loaded even if the above mods are also loaded.
 		"Ignore Anti Overlap" = false
@@ -246,8 +246,8 @@
 	[building.variant_bookshelves]
 		"Change Names" = false
 		#This feature disables itself if any of the following mods are loaded:
-		# - woodster
 		# - woodworks
+		# - woodster
 		#This is done to prevent content overlap.
 		#You can turn this on to force the feature to be loaded even if the above mods are also loaded.
 		"Ignore Anti Overlap" = false
@@ -266,8 +266,8 @@
 	[building.variant_ladders]
 		"Change Names" = false
 		#This feature disables itself if any of the following mods are loaded:
-		# - woodster
 		# - woodworks
+		# - woodster
 		#This is done to prevent content overlap.
 		#You can turn this on to force the feature to be loaded even if the above mods are also loaded.
 		"Ignore Anti Overlap" = false
@@ -322,17 +322,17 @@
 		"Animation Time" = 7.0
 
 	[management.inventory_sorting]
-		"Enable Player Inventory" = false
-		"Enable Player Inventory In Chests" = false
-		"Enable Chests" = false
+		"Enable Player Inventory" = true
+		"Enable Player Inventory In Chests" = true
+		"Enable Chests" = true
 		#Play a click when sorting inventories using keybindings
-		"Satisfying Click" = false
+		"Satisfying Click" = true
 
 	[management.item_sharing]
 		#In ticks.
 		#Allowed values: [0,)
 		Cooldown = 100
-		"Render Items In Chat" = false
+		"Render Items In Chat" = true
 
 	[management.quick_armor_swapping]
 		"Swap Off Hand" = false
@@ -346,12 +346,12 @@
 	"Color Runes" = false
 	"Endermosh Music Disc" = false
 	"Parrot Eggs" = false
-	"Pathfinder Maps" = false
+	"Pathfinder Maps" = true
 	Pickarang = true
 	"Seed Pouch" = true
-	"Skull Pikes" = false
+	"Skull Pikes" = true
 	"Slime In A Bucket" = true
-	"Torch Arrow" = false
+	"Torch Arrow" = true
 	Trowel = true
 
 	[tools.abacus]
@@ -1825,7 +1825,7 @@
 	Crate = false
 	Magnets = false
 	"Matrix Enchanting" = false
-	Pipes = false
+	Pipes = true
 	"Tiny Potato" = false
 	"Totem Of Holding" = false
 
