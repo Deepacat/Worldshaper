@@ -101,6 +101,9 @@
   "waystones": {
     "waystone": true
   },
+  "balm": {
+    "jade": true
+  },
   "custommachinery": {
     "machine_component_provider": true
   },
