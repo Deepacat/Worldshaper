@@ -22,6 +22,18 @@ ServerEvents.recipes(e => {
         'V': 'gtceu:vacuum_tube',
         'D': 'gtceu:iron_drill_head'
     })
+    e.shaped('gtceu:ulv_coal_burner', [
+        'PCP',
+        'MHM',
+        'WTW'
+    ], {
+        'M': 'ulvcovm:ulv_electric_motor',
+        'T': 'gtceu:tin_single_cable',
+        'H': 'gtceu:ulv_machine_hull',
+        'C': 'gtceu:vacuum_tube',
+        'P': 'ulvcovm:ulv_electric_piston',
+        'W': '#forge:plates/wrought_iron'
+    })
     e.shaped('gtceu:ulv_machine_hull', [
         'CUC',
         'WPW'
@@ -62,8 +74,9 @@ ServerEvents.recipes(e => {
         'H': '#forge:tools/hammers',
         'P': '#minecraft:planks'
     })
+
     e.replaceInput({ id: 'ulvcovm:shaped/ulv_electric_motor' }, 'gtceu:magnetic_iron_rod', 'gtceu:iron_rod')
-    e.replaceInput({ id: 'immersive_aircraft:engine'}, 'minecraft:piston', 'ulvcovm:ulv_electric_piston')
+    e.replaceInput({ id: 'immersive_aircraft:engine' }, 'minecraft:piston', 'ulvcovm:ulv_electric_piston')
 })
 
 // Plate recipes
