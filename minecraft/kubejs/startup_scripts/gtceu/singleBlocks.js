@@ -22,6 +22,26 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.CENTRIFUGE)
 
+        event.create('screening_recipes')   
+        .setEUIO('in')
+        .setMaxIOSize(1, 6, 0, 0)
+        .setSlotOverlay(false, false, GuiTextures.CENTRIFUGE_OVERLAY)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_SIFT, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.MOTOR)
+
+   event.create('primary_crushing_recipes')   
+        .setEUIO('in')
+        .setMaxIOSize(2, 6, 1, 0)
+        .setSlotOverlay(false, false, GuiTextures.CRUSHED_ORE_OVERLAY)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_HAMMER, FillDirection.DOWN_TO_UP)
+        .setSound(GTSoundEntries.MACERATOR)
+
+   event.create('secondary_crushing_recipes')   
+        .setEUIO('in')
+        .setMaxIOSize(2, 6, 1, 0)
+        .setSlotOverlay(false, false, GuiTextures.CRUSHED_ORE_OVERLAY)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_MACERATE, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.FURNACE)
     // ULV/shoddy
     // event.create('coal_burner_recipe_type')
     //     .setEUIO('out')
@@ -56,6 +76,31 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
                 .workableSteamHullRenderer(hp, 'gtceu:block/machines/centrifuge')
         ))
 
+
+        event.create('screen', 'simple')
+        .tiers(GTValues.LV)
+        .definition((tier, builder) => (
+            builder
+                .langValue('Screener')
+                .recipeType('screening_recipes')
+                .workableTieredHullRenderer('gtceu:block/machines/sifter')
+        ))
+    event.create('primary-crusher', 'simple')
+        .tiers(GTValues.LV, GTValues.MV)
+        .definition((tier, builder) => (
+            builder
+                .langValue('Primary Crusher')
+                .recipeType('primary_crushing_recipes')
+                .workableTieredHullRenderer('gtceu:block/machines/macerator')
+        ))
+    event.create('secondary-crusher', 'simple')
+        .tiers(GTValues.LV, GTValues.MV)
+        .definition((tier, builder) => (
+            builder
+                .langValue('Secondary Crusher')
+                .recipeType('secondary_crushing_recipes')
+                .workableTieredHullRenderer('gtceu:block/machines/macerator')
+        ))
     // ULV Machines
     // event.create('coal_burner', 'generator')
     //     .tiers(GTValues.ULV)
