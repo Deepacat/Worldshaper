@@ -8,7 +8,7 @@ const ore_properties = {
     zinc: { color: zinc },
   };
   
-  global.raw_ores = [
+  global.minerals = [
     "tin",
     "silver",
     "lead",
@@ -16,23 +16,26 @@ const ore_properties = {
     "aluminum",
     "zinc",
   ];
+  global.mineral_shapes = [
+    "crushed",
+    "dirty_crushed",
+    "ground",
+    "dirty_ground",
+    "powdered",
+    "dirty_powdered"
+  ]
   
   StartupEvents.registry("item", (event) => {
-    for (const mat of global.raw_ores) {
-      event
-        .create(`crushed_${mat}`)
-        .texture("layer0", "kubejs:item/rock/dirty_crushed_ore")
-        .color(0, ore_properties[mat].color)
-        //.tag("forge:crushed_materials")
-        //.tag(`forge:crushed_materials/${mat}`);
+
+    for (const shape of global.mineral_shapes) {
+        for (const mineral of global.minerals) {
+            event
+                .create(`${shape}_${mineral}`)
+                .texture("layer0", `kubejs:item/rock/${shape}`)
+                .color(0, ore_properties[mineral].color)
+                .tag(`forge:${shape}_minerals`)
+                .tag(`forge:${shape}_minerals/${mineral}`)
+        }
     }
-    for (const mat of global.raw_ores) {
-        event
-          .create(`ground_${mat}`)
-          .texture("layer0", "kubejs:item/grit")
-          .color(0, ore_properties[mat].color)
-          //.tag("forge:ground_materials")
-          //.tag(`forge:ground_materials/${mat}`);
-      }
   });
   
