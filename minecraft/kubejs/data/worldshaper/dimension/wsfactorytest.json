@@ -1,0 +1,11 @@
+{
+  "type": "worldshaper:wsfactorytest",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "worldshaper:wsfactorytest",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "preset": "minecraft:overworld"
+    }
+  }
+}
