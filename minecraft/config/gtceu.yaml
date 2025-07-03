@@ -408,6 +408,14 @@ client:
     # Default: true
     renderFluids: true
 
+    # Whether or not to color tiered machine highlights in the tier color
+    # Default: true
+    coloredTieredMachineOutline: true
+
+    # Whether or not to color wire/cable highlights based on voltage tier
+    # Default: true
+    coloredWireOutline: true
+
 # Config options for Tools and Armor
 tools:
   # Random chance for electric tools to take actual damage
@@ -478,7 +486,7 @@ gameplay:
   universalHazards: true
 
   # Whether environmental hazards like pollution or radiation are active
-  # Default: true
+  # Default: false
   environmentalHazards: false
 
   # How much environmental hazards decay per chunk, per tick.
@@ -560,7 +568,7 @@ compat:
     buttonAnchor: BOTTOM_LEFT
 
     # Which direction the buttons will go
-    # Default: "HORIZONTAL"
+    # Default: "VERTICAL"
     direction: HORIZONTAL
 
     # How horizontally far away from the anchor to place the buttons
@@ -570,10 +578,6 @@ compat:
     # How vertically far away from the anchor to place the buttons
     # Default: 0
     yOffset: 0
-
-    # Whether to put buttons on a separate toolbar on the right instead of the map type toolbar in JourneyMap.
-    # Default: true
-    rightToolbar: false
 
   # Whether to hide facades of all blocks in JEI and creative search menu.
   # Default: true
