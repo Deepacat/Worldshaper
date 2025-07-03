@@ -1,15 +1,46 @@
 //priority: 1
 ServerEvents.recipes(e => {
-    // ULV Machine Recipes
-    // e.recipes.gtceu.coal_burner_recipe_type('kubejs:gtceu/test/coal_tag_burning')
-    //     .itemInputs('#minecraft:coals')
-    //     .EUt(-8)
-    //     .duration(200)
+    function stackShaped(result, pattern, key) {
+        for (let i in key) {
+            let stack = Item.of(key[i])
+            key[i] = {
+                item: stack.id.toString(),
+                count: stack.count
+            }
+        }
+        result = Item.of(result)
+        let recipe = {
+            type: "stackcrafting:stack_crafting",
+            category: "misc",
+            key: key,
+            pattern: pattern,
+            result: {
+                item: result.id,
+                count: result.count
+            }
+        }
+        e.custom(recipe)
+    }
 
-    e.recipes.custommachinery.custom_craft('custommachinery:machine_workbench', 'minecraft:dirt')
-        .jei()
-        .requireItem(Item.of('minecraft:iron_ingot', 4), 'in0')
-        .requireItem(Item.of('gtceu:iron_plate', 2), 'in1')
+    stackShaped("17x minecraft:dirt", [
+        "A",
+        "B",
+        "C"
+    ], {
+        "A": "3x minecraft:iron_ingot",
+        "B": "4x minecraft:gold_ingot",
+        "C": "5x minecraft:diamond",
+    })
+    stackShaped("worldshapercore:ulv_miner", [
+        "ABC",
+        "DE "
+    ], {
+        "A": "40x gtceu:wrought_iron_ingot",
+        "B": "18x minecraft:copper_ingot",
+        "C": "12x gtceu:lead_ingot",
+        "D": "32x gtceu:tin_ingot",
+        "E": "10x gtceu:rubber_plate"
+    })
 
     e.shaped('worldshapercore:ulv_miner', [
         'MMM',

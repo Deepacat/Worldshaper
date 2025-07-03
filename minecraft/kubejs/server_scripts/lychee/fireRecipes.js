@@ -1,4 +1,5 @@
 ServerEvents.recipes(e => {
+    // in world fire crafting recipe builder
     function inFire(inputs, outputs) {
         let inFireObj = {}
         inFireObj.type = "lychee:item_inside"
@@ -13,6 +14,7 @@ ServerEvents.recipes(e => {
         })
         e.custom(inFireObj)
     }
+
     // Remember to add items to fire/burn immune
     inFire(['kubejs:ceramic_ball_casting_mold', 'gtceu:glass_dust'], ['gtceu:glass_tube'])
     inFire(['minecraft:clay_ball'], ['kubejs:ceramic_ball'])
