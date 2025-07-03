@@ -2,7 +2,7 @@
   "type": "worldshaper:forlorn",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "worldshaper:wsoverworld",
+    "settings": "minecraft:overworld",
     "biome_source": {
       "type": "minecraft:fixed",
       "biome": "alexscaves:forlorn_hollows"
